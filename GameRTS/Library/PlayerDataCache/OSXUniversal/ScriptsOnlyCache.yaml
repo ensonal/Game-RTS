@@ -18,8 +18,6 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
-    PhotonUnityNetworking.Editor.dll:
-    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.ServerSettings
     Unity.Rider.Editor.dll:
@@ -94,6 +92,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: NetworkManager
     methodName: ActivatePanel
+  - assembly: Assembly-CSharp
+    fullTypeName: NetworkManager
+    methodName: OnBackButtonClicked
   sceneClasses:
     Assets/Scenes/LobbyScene.unity:
     - Class: 1
@@ -1937,11 +1938,11 @@ ScriptsOnlyBuild:
     className: CountdownTimer
   - hash:
       serializedVersion: 2
-      Hash: 5c69efd35ebb23051a32fab69bf06934
+      Hash: da250b8a86b520e954f8bc4678f1e94d
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: NetworkManager
   platform: 2
   scenePathNames:
   - Assets/Scenes/LobbyScene.unity
-  playerPath: /Users/enesonal/Documents/Game-RTS/GameRTS/attemptv2.app
+  playerPath: /Users/enesonal/Desktop/attemptv23.app

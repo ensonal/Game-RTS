@@ -25,6 +25,9 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     [Header("Inside Room Panel")] 
     public GameObject insideRoomPanel;
+    public Text roomInfoText;
+    public GameObject playerListPrefab;
+    public GameObject playerListContent;
     
     [Header("Room List Panel")]
     public GameObject roomListPanel;
@@ -98,6 +101,15 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         }
         ActivatePanel(roomListPanel.name);
     }
+
+    public void OnBackButtonClicked()
+    {
+        if (PhotonNetwork.InLobby)
+        {
+            PhotonNetwork.LeaveLobby();
+        }
+        ActivatePanel(gameOptionsPanel.name);
+    }
     #endregion
     
     #region Methods For Photon
@@ -105,24 +117,43 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         Debug.Log("Connected to Internet");
     }
-    
     public override void OnConnectedToMaster()
     {
         Debug.Log(PhotonNetwork.LocalPlayer.NickName + " is connected to Photon");
         ActivatePanel(gameOptionsPanel.name);
     }
-
     public override void OnCreatedRoom()
     {
         Debug.Log(PhotonNetwork.CurrentRoom.Name + " is created.");
     }
-    
     public override void OnJoinedRoom()
     {
         Debug.Log(PhotonNetwork.LocalPlayer.NickName + " joined to " + PhotonNetwork.CurrentRoom.Name);
         ActivatePanel(insideRoomPanel.name);
-    }
+        
+        roomInfoText.text = "Room Name: " + PhotonNetwork.CurrentRoom.Name + " " +
+                            "Players/Max.Players: " + 
+                            PhotonNetwork.CurrentRoom.PlayerCount + "/" +
+                            PhotonNetwork.CurrentRoom.MaxPlayers;
 
+        foreach (Player player in PhotonNetwork.PlayerList)
+        {
+            GameObject playerListGameObject = Instantiate(playerListPrefab);
+            playerListGameObject.transform.SetParent(playerListContent.transform);
+            playerListGameObject.transform.localScale = Vector3.one;
+            
+            playerListGameObject.transform.Find("PlayerNameText").GetComponent<Text>().text = player.NickName;
+            
+            if(player.ActorNumber == PhotonNetwork.LocalPlayer.ActorNumber)
+            {
+                playerListGameObject.transform.Find("PlayerIndicator").gameObject.SetActive(true);
+            }
+            else
+            {
+                playerListGameObject.transform.Find("PlayerIndicator").gameObject.SetActive(false);
+            }
+        }
+    }
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
         ClearRoomListView();
@@ -165,6 +196,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             
         }
     }
+    public override void OnLeftLobby()
+    {
+        ClearRoomListView();
+        cachedRoomList.Clear();
+    }
+    
     #endregion
 
     #region Private Methods
@@ -191,6 +228,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     
 
     #endregion
+    
     #region Public Methods
 
     public void ActivatePanel(string panelToBeActivated)
