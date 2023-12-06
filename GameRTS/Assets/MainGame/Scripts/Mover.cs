@@ -20,7 +20,7 @@ public class Mover : MonoBehaviour
 
         UpdateAnimator();
 
-        
+
     }
 
     private void MoveToCursor()
