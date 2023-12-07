@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
     <Compile Include="Assets\MainGame\Scripts\ActionScheduler.cs" />
+    <Compile Include="Assets\MainGame\Scripts\RTSCameraController.cs" />
     <Compile Include="Assets\MainGame\Scripts\Fighter.cs" />
     <Compile Include="Assets\MainGame\Scripts\Health.cs" />
     <Compile Include="Assets\MainGame\Scripts\CombatTarget.cs" />
@@ -70,7 +71,6 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\MainGame\Scripts\NetworkManager.cs" />
-    <Compile Include="Assets\MainGame\Scripts\RTSCAmeraController.cs" />
     <Compile Include="Assets\MainGame\Scripts\Mover.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
@@ -98,6 +98,7 @@
     <None Include="Assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Opaque_Shader_VS.shader" />
     <None Include="Assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Opaque_Shader.shader" />
     <None Include="Assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Foliage_Shader.shader" />
+    <None Include="Assets\modern-weapons\README.txt" />
     <None Include="Assets\Photon\PhotonLibs\changes-library.txt" />
     <None Include="Assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Water_Shader.shader" />
     <None Include="Assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Flowers_Shader.shader" />

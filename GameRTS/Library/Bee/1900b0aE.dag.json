@@ -28805,7 +28805,7 @@
         "Assets/MainGame/Scripts/Mover.cs",
         "Assets/MainGame/Scripts/NetworkManager.cs",
         "Assets/MainGame/Scripts/PlayerController.cs",
-        "Assets/MainGame/Scripts/RTSCAmeraController.cs",
+        "Assets/MainGame/Scripts/RTSCameraController.cs",
         "Assets/Photon/PhotonChat/Demos/Common/EventSystemSpawner.cs",
         "Assets/Photon/PhotonChat/Demos/Common/OnStartDelete.cs",
         "Assets/Photon/PhotonChat/Demos/Common/TextButtonTransition.cs",
