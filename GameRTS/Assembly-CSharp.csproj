@@ -65,8 +65,8 @@
     <Compile Include="Assets\MainGame\Scripts\Health.cs" />
     <Compile Include="Assets\MainGame\Scripts\CombatTarget.cs" />
     <Compile Include="Assets\RTS_Camera\Demo\DemoScene.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
     <Compile Include="Assets\MainGame\Scripts\SelectionStuff\selection_component.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
     <Compile Include="Assets\MainGame\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\RTS_Camera\Demo\TargetSelector.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
