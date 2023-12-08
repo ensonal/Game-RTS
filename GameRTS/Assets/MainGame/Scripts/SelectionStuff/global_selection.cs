@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class global_selection : MonoBehaviour
 {
-
     selected_dictionary selected_table;
     RaycastHit hit;
 
@@ -29,7 +30,6 @@ public class global_selection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         selected_table = GetComponent<selected_dictionary>();
         dragSelect = false;
     }
@@ -40,9 +40,10 @@ public class global_selection : MonoBehaviour
         //1. when left mouse button clicked (but not released)
         if (Input.GetMouseButtonDown(0))
         {
+            Debug.Log("global selected worked");
             p1 = Input.mousePosition;
         }
-
+        
         //2. while left mouse button held
         if (Input.GetMouseButton(0))
         {
@@ -122,6 +123,7 @@ public class global_selection : MonoBehaviour
             }//end marquee select
 
             dragSelect = false;
+            
 
         }
 
