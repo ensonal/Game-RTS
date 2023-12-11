@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6618370412469513376}
   - component: {fileID: 8952553092933720170}
   - component: {fileID: 8137712640548648938}
+  - component: {fileID: -5594133672493935668}
   m_Layer: 0
   m_Name: castle
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7439146048943831487}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -104,3 +105,25 @@ MonoBehaviour:
   health: 300
   name: Castle
   sprite: {fileID: 21300000, guid: e9bf7ab6fcbaf47cba3c66e31334106c, type: 3}
+--- !u!64 &-5594133672493935668
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7439146048943831487}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 726112268055120517, guid: 4fbfae4bfce154a7ca84b3814460b9fd, type: 3}

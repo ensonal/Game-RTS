@@ -56,8 +56,8 @@ public class GraphicSelection : MonoBehaviour
                     if (button.gameObject.name == "Create Building Button")
                     {
                         Debug.Log("Create Building Button clicked!");
+                        eventSystemInScene.GameObject().SetActive(false);
                         ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
-                        StartCoroutine(WaitForEventSystem());
                     }
                     
                     if (button.gameObject.name == "Menu Button")
@@ -72,6 +72,20 @@ public class GraphicSelection : MonoBehaviour
                         Debug.Log("Close Menu Button clicked!");
                         ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
                         StartCoroutine(WaitForEventSystem());
+                    }
+                    
+                    if (button.gameObject.name == "Archeryard Button")
+                    {
+                        Debug.Log("Archeryard Button clicked!");
+                        eventSystemInScene.GameObject().SetActive(false);
+                        ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
+                    }
+                    
+                    if (button.gameObject.name == "Lumbermill Button")
+                    {
+                        Debug.Log("Lumbermill Button clicked!");
+                        eventSystemInScene.GameObject().SetActive(false);
+                        ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
                     }
                 }
             }

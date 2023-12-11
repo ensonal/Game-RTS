@@ -221,6 +221,7 @@
      <Folder Include="Assets/RTS_Camera/Demo/Projectors/Shaders" />
      <Folder Include="Assets/Polytope Studio/Lowpoly_Village/Prefabs/Modular/Fence" />
      <Folder Include="Assets/modern-weapons" />
+     <Folder Include="Assets/Scene Models" />
      <None Include="Assets/Photon/PhotonLibs/Photon3Unity3D.xml" />
      <None Include="Assets/Polytope Studio/Lowpoly_Environments/Sources/Shaders/PT_Rock_Shader.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />

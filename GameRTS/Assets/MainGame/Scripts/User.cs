@@ -7,7 +7,6 @@ public class User : MonoBehaviourPun
 
     void Start()
     {
-        balance = 1000;
     }
 
     void Update()
