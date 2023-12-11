@@ -103,4 +103,4 @@ MonoBehaviour:
   cost: 300
   health: 300
   name: Castle
-  sprite: {fileID: 21300000, guid: b9e54e10d6e6e43ea8d493cd6b8dbdb4, type: 3}
+  sprite: {fileID: 21300000, guid: e9bf7ab6fcbaf47cba3c66e31334106c, type: 3}
