@@ -392,6 +392,7 @@
 "Assets/MainGame/Scripts/SelectionStuff/selected_dictionary.cs"
 "Assets/MainGame/Scripts/SelectionStuff/selection_component.cs"
 "Assets/MainGame/Scripts/SelectionStuff/Utils.cs"
+"Assets/MainGame/Scripts/UIManager.cs"
 "Assets/MainGame/Scripts/User.cs"
 "Assets/Photon/PhotonChat/Demos/Common/EventSystemSpawner.cs"
 "Assets/Photon/PhotonChat/Demos/Common/OnStartDelete.cs"

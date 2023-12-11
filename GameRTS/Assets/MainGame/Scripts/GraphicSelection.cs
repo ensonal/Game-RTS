@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -40,12 +39,13 @@ public class GraphicSelection : MonoBehaviour
                 
                 if (button != null)
                 {
-                    if (button.gameObject.name == "Upgrade Button")
+                    if (button.gameObject.name == "Upgrade Castle Button")
                     {
-                        Debug.Log("Upgrade Button clicked!");
+                        Debug.Log("Upgrade Castle Button clicked!");
                         eventSystemInScene.GameObject().SetActive(false);
                         ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
                     }
+                    
                     if (button.gameObject.name == "Close Button")
                     {
                         Debug.Log("Close Button clicked!");
@@ -53,14 +53,26 @@ public class GraphicSelection : MonoBehaviour
                         StartCoroutine(WaitForEventSystem());
                     }
                     
-                    if (button.gameObject.layer == 3)
+                    if (button.gameObject.name == "Create Building Button")
                     {
-                        Debug.Log("Buy Building Button clicked!");
+                        Debug.Log("Create Building Button clicked!");
                         ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
                         StartCoroutine(WaitForEventSystem());
                     }
-
-
+                    
+                    if (button.gameObject.name == "Menu Button")
+                    {
+                        Debug.Log("Menu Button clicked!");
+                        eventSystemInScene.GameObject().SetActive(false);
+                        ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
+                    }
+                    
+                    if (button.gameObject.name == "Close Menu Button")
+                    {
+                        Debug.Log("Close Menu Button clicked!");
+                        ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
+                        StartCoroutine(WaitForEventSystem());
+                    }
                 }
             }
         }

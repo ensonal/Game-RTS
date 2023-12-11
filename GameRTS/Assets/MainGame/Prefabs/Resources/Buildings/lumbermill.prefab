@@ -103,4 +103,4 @@ MonoBehaviour:
   cost: 200
   health: 200
   name: Lumbermill
-  sprite: {fileID: 21300000, guid: 1e3896192541c4709b0665cfbf942d22, type: 3}
+  sprite: {fileID: 21300000, guid: 223faeffef0e24106a322a007021eaee, type: 3}
