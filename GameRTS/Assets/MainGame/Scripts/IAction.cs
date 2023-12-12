@@ -1,6 +1,6 @@
 ﻿
 
-//public interface IAction 
-//{
-//    void Cancel();
-//}
+public interface IAction 
+{
+    void Cancel();
+}
