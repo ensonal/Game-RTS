@@ -28,14 +28,16 @@ public class UnitClick : MonoBehaviour
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
                     UnitSelections.Instance.ShiftClickSelect(hit.collider.gameObject);
-                    
+                   
                 }
                 else
                 {
                     UnitSelections.Instance.ClickSelect(hit.collider.gameObject);
+                    Debug.Log(hit.collider.gameObject.name);
+
                 }
 
-                
+
             }
             else
             {

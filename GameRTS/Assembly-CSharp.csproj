@@ -60,8 +60,13 @@
   <ItemGroup>
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
     <Compile Include="Assets\MainGame\Scripts\Building.cs" />
+    <Compile Include="Assets\MainGame\Scripts\ActionScheduler.cs" />
     <Compile Include="Assets\MainGame\Scripts\UIManager.cs" />
     <Compile Include="Assets\MainGame\Scripts\RTSCameraController.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Fighter.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Health.cs" />
+    <Compile Include="Assets\MainGame\Scripts\CombatTarget.cs" />
+    <Compile Include="Assets\MainGame\Scripts\MoverToEnemy.cs" />
     <Compile Include="Assets\MainGame\Scripts\UnitClick.cs" />
     <Compile Include="Assets\RTS_Camera\Demo\DemoScene.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
@@ -79,11 +84,14 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextToggleIsOnTransition.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
+    <Compile Include="Assets\MainGame\Scripts\IAction.cs" />
     <Compile Include="Assets\RTS_Camera\Scripts\RTS_Camera.cs" />
     <Compile Include="Assets\MainGame\Scripts\Unit.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
     <Compile Include="Assets\MainGame\Scripts\User.cs" />
+    <Compile Include="Assets\MainGame\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\MainGame\Scripts\FollowCamera.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
