@@ -11,7 +11,6 @@ public class BuildingManager : MonoBehaviour
     public static BuildingManager instance;
 
     [SerializeField] private GameObject upgradePanel;
-    [SerializeField] private TextMeshProUGUI balanceText;
     [SerializeField] private TextMeshProUGUI[] nameTexts;
     [SerializeField] private TextMeshProUGUI[] costTexts;
     [SerializeField] private Image[] images;
@@ -40,16 +39,16 @@ public class BuildingManager : MonoBehaviour
     {
         castlePrefabA.transform.localScale = new Vector3(4, 4, 4);
         Instantiate(castlePrefabA, new Vector3(63.7f, 9.99f, 61.1f), Quaternion.Euler(0, -90, 0));
-        lumbermillPrefabA.transform.localScale = new Vector3(2, 2, 2);
+        lumbermillPrefabA.transform.localScale = new Vector3(3, 3, 3);
         Instantiate(lumbermillPrefabA, new Vector3(75.47f, 9.99f, 74.1f), Quaternion.Euler(0, -90, 0));
-        archeryardPrefabA.transform.localScale = new Vector3(2, 2, 2);
+        archeryardPrefabA.transform.localScale = new Vector3(3, 3, 3);
         Instantiate(archeryardPrefabA, new Vector3(75.47f, 9.99f, 66.94f), Quaternion.Euler(0, -90, 0));
 
         castlePrefabB.transform.localScale = new Vector3(4, 4, 4);
         Instantiate(castlePrefabB, new Vector3(2.9f, 9.99f, 65.4f), Quaternion.Euler(0, 90, 0));
-        lumbermillPrefabB.transform.localScale = new Vector3(2, 2, 2);
+        lumbermillPrefabB.transform.localScale = new Vector3(3, 3, 3);
         Instantiate(lumbermillPrefabB, new Vector3(-10.8f, 9.99f, 74.1f), Quaternion.Euler(0, 90, 0));
-        archeryardPrefabB.transform.localScale = new Vector3(2, 2, 2);
+        archeryardPrefabB.transform.localScale = new Vector3(3, 3, 3);
         Instantiate(archeryardPrefabB, new Vector3(-12.3f, 9.99f, 58.9f), Quaternion.Euler(0, 90, 0));
         
         buildingInScene.Add(castlePrefabA);
@@ -83,7 +82,6 @@ public class BuildingManager : MonoBehaviour
     public void ShowUpgradePanel()
     {
         upgradePanel.SetActive(true);
-        UpdateBalanceText();
         PopulateUpgradePanel();
     }
 
@@ -112,6 +110,7 @@ public class BuildingManager : MonoBehaviour
         //PhotonNetwork.Instantiate(selectedBuilding.name, new Vector3(2.73f,4.68f,65.04f), Quaternion.Euler(0, 90, 0));
         if (prefabName.Contains("archer"))
         {
+            Debug.Log("Archer is upgraded.");
             archeryardPrefabA.transform.localScale = new Vector3(2, 2, 2);
             Instantiate(archeryardPrefabA, new Vector3(75.47f, 9.99f, 66.94f), Quaternion.Euler(0, -90, 0));
             HideUpgradePanel();
@@ -119,7 +118,7 @@ public class BuildingManager : MonoBehaviour
 
         if (prefabName.Contains("lumbermill"))
         {
-            Debug.Log("Lumbermill is bought.");
+            Debug.Log("Lumbermill is upgraded.");
             lumbermillPrefabA.transform.localScale = new Vector3(2, 2, 2);
             Instantiate(lumbermillPrefabA, new Vector3(75.47f, 9.99f, 74.1f), Quaternion.Euler(0, -90, 0));
             HideUpgradePanel();
@@ -127,7 +126,7 @@ public class BuildingManager : MonoBehaviour
 
         if (prefabName.Contains("castle"))
         {
-            Debug.Log("Castle is bought.");
+            Debug.Log("Castle is upgraded.");
             castlePrefabA.transform.localScale = new Vector3(2, 2, 2);
             Instantiate(castlePrefabA, new Vector3(75.47f, 9.99f, 74.1f), Quaternion.Euler(0, -90, 0));
             HideUpgradePanel();
@@ -136,7 +135,7 @@ public class BuildingManager : MonoBehaviour
 
     public void CheckBalanceIsEnough(GameObject selectedBuilding)
     {
-        if (user.gameObject.GetComponent<User>().balance >= selectedBuilding.GetComponent<Building>().cost)
+        if (user.gameObject.GetComponent<User>().wood >= selectedBuilding.GetComponent<Building>().cost)
         {
             Debug.Log("Balance is enough.");
             BuySelectedBuilding(selectedBuilding.name);
@@ -145,11 +144,6 @@ public class BuildingManager : MonoBehaviour
         {
             Debug.Log("Balance is not enough.");
         }
-    }
-
-    private void UpdateBalanceText()
-    {
-        balanceText.text = "Balance: " + user.gameObject.GetComponent<User>().balance.ToString();
     }
     
     private IEnumerator WaitForStartGame()

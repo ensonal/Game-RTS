@@ -32,7 +32,7 @@ public class Building : MonoBehaviour
             nameText.text = name;
 
         if (costText != null)
-            costText.text = "Cost: " + cost.ToString();
+            costText.text = cost.ToString();
     }
 
 }

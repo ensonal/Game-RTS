@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class User : MonoBehaviourPun
 {
-    [SerializeField] public int balance;
+    [SerializeField] public int wood;
+    [SerializeField] public int coin;
 
     void Start()
     {

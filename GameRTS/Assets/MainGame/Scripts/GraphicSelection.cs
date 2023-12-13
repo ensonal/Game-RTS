@@ -39,18 +39,18 @@ public class GraphicSelection : MonoBehaviour
                 
                 if (button != null)
                 {
-                    if (button.gameObject.name == "Upgrade Castle Button")
-                    {
-                        Debug.Log("Upgrade Castle Button clicked!");
-                        eventSystemInScene.GameObject().SetActive(false);
-                        ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
-                    }
-                    
                     if (button.gameObject.name == "Close Button")
                     {
                         Debug.Log("Close Button clicked!");
                         ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
                         StartCoroutine(WaitForEventSystem());
+                    }
+                    
+                    if (button.gameObject.name == "Create Unit Button")
+                    {
+                        Debug.Log("Create Unit Button clicked!");
+                        eventSystemInScene.GameObject().SetActive(false);
+                        ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
                     }
                     
                     if (button.gameObject.name == "Create Building Button")
@@ -84,6 +84,27 @@ public class GraphicSelection : MonoBehaviour
                     if (button.gameObject.name == "Lumbermill Button")
                     {
                         Debug.Log("Lumbermill Button clicked!");
+                        eventSystemInScene.GameObject().SetActive(false);
+                        ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
+                    }
+                    
+                    if (button.gameObject.name == "WoodCutter Button")
+                    {
+                        Debug.Log("WoodCutter Button clicked!");
+                        eventSystemInScene.GameObject().SetActive(false);
+                        ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
+                    }
+                    
+                    if (button.gameObject.name == "Swat Button")
+                    {
+                        Debug.Log("Swat Button clicked!");
+                        eventSystemInScene.GameObject().SetActive(false);
+                        ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
+                    }
+                    
+                    if (button.gameObject.name == "Archer Button")
+                    {
+                        Debug.Log("Archer Button clicked!");
                         eventSystemInScene.GameObject().SetActive(false);
                         ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
                     }
