@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] public new string name;
+    [SerializeField] public int cost;
+    [SerializeField] public Sprite sprite;
     void Start()
     {
         UnitSelections.Instance.unitList.Add(this.gameObject);
