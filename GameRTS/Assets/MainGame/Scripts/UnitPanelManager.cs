@@ -16,9 +16,9 @@ namespace MainGame.Scripts
         [SerializeField] private GameObject woodCutterPrefabA;
         [SerializeField] private Image[] images;
         [SerializeField] private GameObject user;
-        [SerializeField] private TMP_InputField swatInputField;
-        [SerializeField] private TMP_InputField archerInputField;
-        [SerializeField] private TMP_InputField woodCutterInputField;
+        [SerializeField] private TextMeshProUGUI swatCount;
+        [SerializeField] private TextMeshProUGUI archerCount;
+        [SerializeField] private TextMeshProUGUI woodCutterCount;
         
         private List<Unit> units;
         private int buyAttemptCount = 0;
@@ -41,12 +41,13 @@ namespace MainGame.Scripts
             
             if (prefabName.Contains("Archer"))
             {
-                Vector3 archerInstantiatePosition = new Vector3(71.22f, 9.99f, 67.57f);
+                Vector3 archerInstantiatePosition = new Vector3(71.22f, 10.99f, 67.57f);
                 archerPrefabA.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                 
-                for(int i = 0; i < 5; i++)
+                for(int i = 0; i < Int32.Parse(archerCount.text); i++)
                 {
                     Instantiate(archerPrefabA, archerInstantiatePosition, Quaternion.Euler(0, -90, 0));
+                    user.gameObject.GetComponent<User>().coin -= archerPrefabA.GetComponent<Unit>().cost;
                     archerInstantiatePosition -= addedPosition;
                 }
                 
@@ -56,12 +57,13 @@ namespace MainGame.Scripts
 
             if (prefabName.Contains("Swat"))
             {
-                Vector3 swatInstantiatePosition = new Vector3(55.86f, 9.99f, 61.09f);
+                Vector3 swatInstantiatePosition = new Vector3(55.86f, 10.99f, 61.09f);
                 swatPrefabA.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                 
-                for(int i = 0; i < 5; i++)
+                for(int i = 0; i < Int32.Parse(swatCount.text); i++)
                 {
                     Instantiate(swatPrefabA, swatInstantiatePosition, Quaternion.Euler(0, -90, 0));
+                    user.gameObject.GetComponent<User>().coin -= archerPrefabA.GetComponent<Unit>().cost;
                     swatInstantiatePosition -= addedPosition;
                 }
                 
@@ -71,16 +73,17 @@ namespace MainGame.Scripts
 
             if (prefabName.Contains("Wood"))
             {
-                Vector3 woodInstantiatePosition = new Vector3(71.91f, 9.99f, 74.4f);
+                Vector3 woodInstantiatePosition = new Vector3(71.91f, 10.99f, 74.4f);
                 woodCutterPrefabA.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
 
                 if (buyAttemptCount > 0)
                 {
                     woodInstantiatePosition += addedPosition2;
+                    user.gameObject.GetComponent<User>().coin -= archerPrefabA.GetComponent<Unit>().cost;
                     addedPosition2 += addedPosition2;
                 }
                 
-                for(int i = 0; i < 5; i++)
+                for(int i = 0; i < Int32.Parse(woodCutterCount.text); i++)
                 {
                     if (buyAttemptCount > 0)
                     {
@@ -105,7 +108,25 @@ namespace MainGame.Scripts
 
         public void CheckBalanceIsEnough(GameObject unitToBuy)
         {
-            if (user.gameObject.GetComponent<User>().coin >= unitToBuy.GetComponent<Unit>().cost)
+            var selectedUnitCost = unitToBuy.GetComponent<Unit>().cost;
+            
+            if(unitToBuy.name.Contains("Wood"))
+            {
+                selectedUnitCost = unitToBuy.GetComponent<Unit>().cost * Int32.Parse(woodCutterCount.text);
+            }
+
+            if (unitToBuy.name.Contains("Archer"))
+            {
+                selectedUnitCost = unitToBuy.GetComponent<Unit>().cost * Int32.Parse(archerCount.text);
+            }
+            
+            if (unitToBuy.name.Contains("Swat"))
+            {
+                selectedUnitCost = unitToBuy.GetComponent<Unit>().cost * Int32.Parse(swatCount.text);
+            }
+            
+            Debug.Log("Total cost: " + selectedUnitCost);
+            if (user.gameObject.GetComponent<User>().coin >= selectedUnitCost)
             {
                 Debug.Log("Balance is enough.");
                 BuySelectedUnit(unitToBuy.name);
@@ -125,6 +146,9 @@ namespace MainGame.Scripts
         public void HideUnitPanel()
         {
             createUnitPanel.SetActive(false);
+            swatCount.text = "0";
+            archerCount.text = "0";
+            woodCutterCount.text = "0";
         }
 
         private void PopulateUnitPanel()
@@ -140,6 +164,50 @@ namespace MainGame.Scripts
                 nameTexts[i].text = units[i].name;
                 costTexts[i].text = units[i].cost.ToString();
                 images[i].sprite = units[i].sprite;
+            }
+        }
+        
+        public void IncreaseSwatCount()
+        {
+            var currentSwatCount = Int32.Parse(swatCount.text);
+            swatCount.text = (currentSwatCount + 1).ToString();
+        }
+        
+        public void IncreaseArcherCount()
+        {
+            var currentArcherCount = Int32.Parse(archerCount.text);
+            archerCount.text = (currentArcherCount + 1).ToString();
+        }
+        
+        public void IncreaseWoodCutterCount()
+        {
+            Debug.Log("IncreaseWoodCutterCount method is called.");
+            var currentWoodCutterCount = Int32.Parse(woodCutterCount.text);
+            woodCutterCount.text = (currentWoodCutterCount + 1).ToString();
+        }
+        
+        public void DecreaseSwatCount()
+        {
+            if (swatCount.text != "0")
+            {
+                swatCount.text = (Int32.Parse(swatCount.text) - 1).ToString();
+
+            }
+        }
+        
+        public void DecreaseArcherCount()
+        {
+            if (archerCount.text != "0")
+            {
+                archerCount.text = (Int32.Parse(archerCount.text) - 1).ToString();
+            }
+        }
+        
+        public void DecreaseWoodCutterCount()
+        {
+            if (woodCutterCount.text != "0")
+            {
+                woodCutterCount.text = (Int32.Parse(woodCutterCount.text) - 1).ToString();
             }
         }
     }

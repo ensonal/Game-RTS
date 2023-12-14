@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,12 +12,14 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
+
         if (InteractWithMovement() == true)
         {
             return;
         }
         //Debug.Log("Nothing");
     }
+
     private bool InteractWithCombat()
     {
         RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
@@ -30,30 +33,53 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                GetComponent<Fighter>().Attack(target);
+                //GetComponent<Fighter>().Attack(target);
             }
+
             return true;
         }
+
         return false;
     }
+
     private bool InteractWithMovement()
     {
         RaycastHit hit;
         bool hasHit = Physics.Raycast(GetMouseRay(), out hit);
         if (hasHit)
         {
-            if(Input.GetMouseButton(0))
+            if (Input.GetMouseButton(2))
             {
                 GetComponent<MoveToEnemy>().StartMoveAction(hit.point);
                 //Debug.Log("Move");
             }
+
             return true;
-            
+
         }
+
         return false;
     }
+
     private static Ray GetMouseRay()
     {
         return Camera.main.ScreenPointToRay(Input.mousePosition);
     }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Player Collision");
+        Debug.Log(other.gameObject.name);
+        GetComponent<Fighter>().Attack(other);
+    }
+    
+    private void OnTriggerStay(Collider other)
+    {
+        Debug.Log("Player Collision");
+        Debug.Log(other.gameObject.name);
+        GetComponent<Fighter>().Attack(other);
+    }
+    
+    
 }

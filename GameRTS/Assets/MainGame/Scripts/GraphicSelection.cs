@@ -35,6 +35,7 @@ public class GraphicSelection : MonoBehaviour
             foreach (var result in results)
             {
                 Debug.Log("Hit " + result.gameObject.name);
+                
                 Button button = result.gameObject.GetComponent<Button>();
                 
                 if (button != null)
@@ -81,6 +82,13 @@ public class GraphicSelection : MonoBehaviour
                         ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
                     }
                     
+                    if (button.gameObject.name == "Castle Button")
+                    {
+                        Debug.Log("Castle Button clicked!");
+                        eventSystemInScene.GameObject().SetActive(false);
+                        ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
+                    }
+                    
                     if (button.gameObject.name == "Lumbermill Button")
                     {
                         Debug.Log("Lumbermill Button clicked!");
@@ -108,6 +116,21 @@ public class GraphicSelection : MonoBehaviour
                         eventSystemInScene.GameObject().SetActive(false);
                         ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
                     }
+                    
+                    if(button.gameObject.name == "Plus Button")
+                    {
+                        Debug.Log("Plus Button clicked!");
+                        eventSystemInScene.GameObject().SetActive(false);
+                        ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
+                    }
+                    
+                    if(button.gameObject.name == "Minus Button")
+                    {
+                        Debug.Log("Minus Button clicked!");
+                        eventSystemInScene.GameObject().SetActive(false);
+                        ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
+                    }
+  
                 }
             }
         }

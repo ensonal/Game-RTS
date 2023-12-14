@@ -50,7 +50,7 @@ public class BuildingManager : MonoBehaviour
         Instantiate(lumbermillPrefabB, new Vector3(-10.8f, 9.99f, 74.1f), Quaternion.Euler(0, 90, 0));
         archeryardPrefabB.transform.localScale = new Vector3(3, 3, 3);
         Instantiate(archeryardPrefabB, new Vector3(-12.3f, 9.99f, 58.9f), Quaternion.Euler(0, 90, 0));
-        
+
         buildingInScene.Add(castlePrefabA);
         buildingInScene.Add(lumbermillPrefabA);
         buildingInScene.Add(archeryardPrefabA);
@@ -64,18 +64,6 @@ public class BuildingManager : MonoBehaviour
         if (coroutineCountToStart == 0)
         {
             StartCoroutine(WaitForStartGame());
-        }
-        
-        foreach (var building in buildingInScene)
-        {
-            if (building.gameObject.GetComponent<Building>().health <= 0)
-            {
-                building.SetActive(false);
-            }
-            else
-            {
-                building.SetActive(true);
-            }
         }
     }
 
@@ -103,32 +91,32 @@ public class BuildingManager : MonoBehaviour
         }
     }
 
-    private void BuySelectedBuilding(string prefabName)
+    private void UpgradeSelectedBuilding(string prefabName)
     {
-        Debug.Log("BuySelectedBuilding method is called.");
+        Debug.Log("UpgradeSelectedBuilding method is called.");
         Debug.Log("Selected building name: " + prefabName);
         //PhotonNetwork.Instantiate(selectedBuilding.name, new Vector3(2.73f,4.68f,65.04f), Quaternion.Euler(0, 90, 0));
         if (prefabName.Contains("archer"))
         {
             Debug.Log("Archer is upgraded.");
-            archeryardPrefabA.transform.localScale = new Vector3(2, 2, 2);
-            Instantiate(archeryardPrefabA, new Vector3(75.47f, 9.99f, 66.94f), Quaternion.Euler(0, -90, 0));
+            archeryardPrefabA.GetComponent<Health>().health = 300f;
+            user.gameObject.GetComponent<User>().wood -= archeryardPrefabA.GetComponent<Building>().cost;
             HideUpgradePanel();
         }
 
         if (prefabName.Contains("lumbermill"))
         {
             Debug.Log("Lumbermill is upgraded.");
-            lumbermillPrefabA.transform.localScale = new Vector3(2, 2, 2);
-            Instantiate(lumbermillPrefabA, new Vector3(75.47f, 9.99f, 74.1f), Quaternion.Euler(0, -90, 0));
+            lumbermillPrefabA.GetComponent<Health>().health = 300f;
+            user.gameObject.GetComponent<User>().wood -= lumbermillPrefabA.GetComponent<Building>().cost;
             HideUpgradePanel();
         }
 
         if (prefabName.Contains("castle"))
         {
             Debug.Log("Castle is upgraded.");
-            castlePrefabA.transform.localScale = new Vector3(2, 2, 2);
-            Instantiate(castlePrefabA, new Vector3(75.47f, 9.99f, 74.1f), Quaternion.Euler(0, -90, 0));
+            castlePrefabA.GetComponent<Health>().health = 500f;
+            user.gameObject.GetComponent<User>().wood -= castlePrefabA.GetComponent<Building>().cost;
             HideUpgradePanel();
         }
     }
@@ -138,18 +126,17 @@ public class BuildingManager : MonoBehaviour
         if (user.gameObject.GetComponent<User>().wood >= selectedBuilding.GetComponent<Building>().cost)
         {
             Debug.Log("Balance is enough.");
-            BuySelectedBuilding(selectedBuilding.name);
+            UpgradeSelectedBuilding(selectedBuilding.name);
         }
         else
         {
             Debug.Log("Balance is not enough.");
         }
     }
-    
+
     private IEnumerator WaitForStartGame()
     {
         yield return new WaitForSeconds(2);
         coroutineCountToStart++;
     }
-    
 }
