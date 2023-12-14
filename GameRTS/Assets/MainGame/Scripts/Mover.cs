@@ -1,38 +1,33 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Mover : MonoBehaviour
+public class Mover : MonoBehaviour, IAction
 {
-
-    [SerializeField] Transform target;
-
-    Ray myRay;
-
-    private void Update()
+    void Update()
     {
-        if (Input.GetMouseButton(1))
-        {
-            MoveToCursor();
-
-        }
-
         UpdateAnimator();
-
-
     }
-
-    private void MoveToCursor()
+    public void StartMoveAction(Vector3 hit)
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        bool hasHit = Physics.Raycast(ray, out hit);
-        if (hasHit)
-        {
-            GetComponent<NavMeshAgent>().destination = hit.point;
-        }
+        GetComponent<ActionScheduler>().StartAction(this);
+        GetComponent<Fighter>().Cancel();
+        GetComponent<NavMeshAgent>().destination = hit;
+        GetComponent<NavMeshAgent>().isStopped = false;
     }
+    public void MoveTo(Vector3 hit)
+    {
+        GetComponent<NavMeshAgent>().destination = hit;
+        GetComponent<NavMeshAgent>().isStopped = false;
+    }
+
+    public void Cancel()
+    {
+        GetComponent<NavMeshAgent>().isStopped = true;
+    }
+
+   
 
     private void UpdateAnimator()
     {
@@ -41,4 +36,8 @@ public class Mover : MonoBehaviour
         float speed = localVelocity.z;
         GetComponent<Animator>().SetFloat("forwardSpeed", speed);
     }
+
+
+
+
 }

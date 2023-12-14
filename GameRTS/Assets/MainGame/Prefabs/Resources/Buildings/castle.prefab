@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 720739260865003821}
   - component: {fileID: 5238749721671001355}
   - component: {fileID: 4376489990051704525}
-  - component: {fileID: 1359664611363687440}
   - component: {fileID: 4725559373042975021}
+  - component: {fileID: -5713967823069292195}
   m_Layer: 0
   m_Name: castle
   m_TagString: Untagged
@@ -143,19 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0dac4a808e8f4c4799fc2c62e769066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1359664611363687440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2149138306500054904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 327a05d063f3082449afe40a1b9ff710, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 500
 --- !u!65 &4725559373042975021
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -177,6 +164,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.3904672, y: 2.532763, z: 1.4853382}
   m_Center: {x: 0.0018298626, y: 1.2406964, z: 0.04858303}
+--- !u!114 &-5713967823069292195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2149138306500054904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 327a05d063f3082449afe40a1b9ff710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 500
 --- !u!1 &8858125327383702098
 GameObject:
   m_ObjectHideFlags: 0

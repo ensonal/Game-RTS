@@ -27,11 +27,11 @@ public class Fighter : MonoBehaviour, IAction
         bool isInRange = Vector3.Distance(transform.position, targetObject.position) < weaponRange;
         if (isInRange == false)
         {
-            GetComponent<MoveToEnemy>().MoveTo(targetObject.position);
+            GetComponent<Mover>().MoveTo(targetObject.position);
         }else
         {
             AttackMethod();
-            GetComponent<MoveToEnemy>().Cancel();
+            GetComponent<Mover>().Cancel();
         }
     }
     void Hit()
@@ -48,13 +48,15 @@ public class Fighter : MonoBehaviour, IAction
             timeSinceLastAttack = 0;
         }
     }
-    
-    public void Attack(Collider col)
+
+   
+
+    public void Attack(CombatTarget target)
    {
+
         GetComponent<ActionScheduler>().StartAction(this);
-        col.gameObject.GetComponent<Health>().TakeDamage(weaponDamage);
-        
-        Debug.Log("Attack is done");
+        targetObject = target.transform;
+        //Debug.Log("Attack is done");
    }
     public void Cancel()
     {
