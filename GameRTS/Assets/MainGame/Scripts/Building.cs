@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class Building : MonoBehaviour
 {
     [SerializeField] public int cost;
-    [SerializeField] public int health;
     [SerializeField] public new string name;
     [SerializeField] public Sprite sprite;
 
@@ -33,6 +32,11 @@ public class Building : MonoBehaviour
 
         if (costText != null)
             costText.text = cost.ToString();
+    }
+    
+    void OnTriggerEnter(Collider col){
+        Debug.Log("Build Collision");
+        Debug.Log(col.gameObject.name);
     }
 
 }

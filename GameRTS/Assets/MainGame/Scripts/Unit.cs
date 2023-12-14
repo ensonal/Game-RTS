@@ -7,6 +7,7 @@ public class Unit : MonoBehaviour
     [SerializeField] public new string name;
     [SerializeField] public int cost;
     [SerializeField] public Sprite sprite;
+    [SerializeField] public Sprite selectedRing;
     void Start()
     {
         UnitSelections.Instance.unitList.Add(this.gameObject);
@@ -16,4 +17,5 @@ public class Unit : MonoBehaviour
     {
         UnitSelections.Instance.unitList.Remove(this.gameObject);
     }
+    
 }

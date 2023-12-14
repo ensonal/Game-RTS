@@ -48,14 +48,13 @@ public class Fighter : MonoBehaviour, IAction
             timeSinceLastAttack = 0;
         }
     }
-
-   
-
-    public void Attack(CombatTarget target)
+    
+    public void Attack(Collider col)
    {
         GetComponent<ActionScheduler>().StartAction(this);
-        targetObject = target.transform;
-        //Debug.Log("Attack is done");
+        col.gameObject.GetComponent<Health>().TakeDamage(weaponDamage);
+        
+        Debug.Log("Attack is done");
    }
     public void Cancel()
     {

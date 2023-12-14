@@ -26,6 +26,7 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        FillTopDisplay();
     }
     
     public void ShowMenuButton()
@@ -54,7 +55,7 @@ public class UIManager : MonoBehaviour
     
     public void FillTopDisplay()
     {
-        healthBar.gameObject.GetComponent<TextMeshProUGUI>().text = castle.gameObject.GetComponent<Building>().health.ToString();
+        healthBar.gameObject.GetComponent<TextMeshProUGUI>().text = castle.gameObject.GetComponent<Health>().health.ToString();
         woodBar.gameObject.GetComponent<TextMeshProUGUI>().text = user.gameObject.GetComponent<User>().wood.ToString();
         coinBar.gameObject.GetComponent<TextMeshProUGUI>().text = user.gameObject.GetComponent<User>().coin.ToString();
     }
