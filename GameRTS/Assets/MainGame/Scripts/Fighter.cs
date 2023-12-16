@@ -22,7 +22,9 @@ public class Fighter : MonoBehaviour, IAction
 
         if (targetObject == null)
         {
+            
             return;
+
         }
         bool isInRange = Vector3.Distance(transform.position, targetObject.position) < weaponRange;
         if (isInRange == false)
