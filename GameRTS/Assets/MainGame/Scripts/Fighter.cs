@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +14,7 @@ public class Fighter : MonoBehaviour, IAction
     private void Start()
     {
         weaponRange = 2.0f;
-        weaponDamage = 10f;
+        weaponDamage = 2;
         timeBetweenAttacks = 1f;
     }
     private void Update()
@@ -48,9 +49,7 @@ public class Fighter : MonoBehaviour, IAction
             timeSinceLastAttack = 0;
         }
     }
-
-   
-
+    
     public void Attack(CombatTarget target)
    {
         GetComponent<ActionScheduler>().StartAction(this);
@@ -60,5 +59,26 @@ public class Fighter : MonoBehaviour, IAction
     public void Cancel()
     {
         targetObject = null;
+    }
+
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.name == "castle(Clone)")
+        {
+            Debug.Log("castle trigger");
+            other.gameObject.GetComponent<Health>().TakeDamage(weaponDamage);
+        }
+
+        if (other.gameObject.name == "lumbermill(Clone)")
+        {
+            Debug.Log("lumbermill trigger");
+            other.gameObject.GetComponent<Health>().TakeDamage(weaponDamage);
+        }
+        
+        if(other.gameObject.name == "archeryrange(Clone)")
+        {
+            Debug.Log("archeryrange trigger");
+            other.gameObject.GetComponent<Health>().TakeDamage(weaponDamage);
+        }
     }
 }

@@ -33,10 +33,4 @@ public class Building : MonoBehaviour
         if (costText != null)
             costText.text = cost.ToString();
     }
-    
-    void OnTriggerEnter(Collider col){
-        Debug.Log("Build Collision");
-        Debug.Log(col.gameObject.name);
-    }
-
 }

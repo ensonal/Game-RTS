@@ -13,7 +13,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject healthBar;
     [SerializeField] private GameObject woodBar;
     [SerializeField] private GameObject coinBar;
-    [SerializeField] private GameObject castle;
 
     
     // Start is called before the first frame update
@@ -55,7 +54,9 @@ public class UIManager : MonoBehaviour
     
     public void FillTopDisplay()
     {
-        healthBar.gameObject.GetComponent<TextMeshProUGUI>().text = castle.gameObject.GetComponent<Health>().health.ToString();
+        GameObject castle = GameObject.FindGameObjectWithTag("castleA");
+        healthBar.gameObject.GetComponent<TextMeshProUGUI>().text =
+            castle.gameObject.GetComponent<Health>().GetHealth().ToString();
         woodBar.gameObject.GetComponent<TextMeshProUGUI>().text = user.gameObject.GetComponent<User>().wood.ToString();
         coinBar.gameObject.GetComponent<TextMeshProUGUI>().text = user.gameObject.GetComponent<User>().coin.ToString();
     }

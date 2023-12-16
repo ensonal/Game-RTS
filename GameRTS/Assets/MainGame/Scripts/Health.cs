@@ -7,9 +7,7 @@ public class Health : MonoBehaviour
 {
    
     [SerializeField] public float health;
-
-   
-
+    
     private void Update()
     {
         if (health <= 0)
@@ -21,5 +19,15 @@ public class Health : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health = Mathf.Max(health - damage, 0);
+    }
+    
+    public void Heal(float heal)
+    {
+        health = heal;
+    }
+    
+    public float GetHealth()
+    {
+        return health;
     }
 }

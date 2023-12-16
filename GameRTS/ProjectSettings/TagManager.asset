@@ -7,6 +7,12 @@ TagManager:
   - Bullet
   - Fighter
   - Citizen
+  - castleA
+  - castleB
+  - archeryrangeB
+  - archeryrangeA
+  - lumbermillA
+  - lumbermillB
   layers:
   - Default
   - TransparentFX

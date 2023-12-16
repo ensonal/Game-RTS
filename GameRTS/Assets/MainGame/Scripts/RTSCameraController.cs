@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using Photon.Pun;
+using UnityEngine;
 
-public class RTSCameraController : MonoBehaviour
+public class RTSCameraController : MonoBehaviourPunCallbacks
 {
     float speed = 6f;
     float zoomSpeed = 1000.0f;
@@ -12,63 +13,73 @@ public class RTSCameraController : MonoBehaviour
     Vector2 p1;
     Vector2 p2;
 
+    private PhotonView pw;
+
     private void Start()
     {
-        
+        pw = GetComponent<PhotonView>();
+        if (!pw.IsMine)
+        {
+            Destroy(GetComponentInChildren<Camera>().gameObject);
+            Destroy(this);
+        }
     }
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (pw.IsMine)
         {
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
 
-            speed = 60f;
-            zoomSpeed = 2000.0f;
+                speed = 60f;
+                zoomSpeed = 2000.0f;
 
+            }
+            else
+            {
+                speed = 35f;
+                zoomSpeed = 1000.0f;
+            }
+
+            float hsp = speed * Input.GetAxis("Horizontal");
+            float vsp = speed * Input.GetAxis("Vertical");
+
+            float scrollSp = Mathf.Log(transform.position.y) * -zoomSpeed * Input.GetAxis("Mouse ScrollWheel");
+
+
+            if ((transform.position.y >= maxHeight) && (scrollSp > 0))
+            {
+                scrollSp = 0;
+            }
+            else if((transform.position.y <= minHeight) && (scrollSp < 0))
+            {
+                scrollSp = 0;
+            }
+
+            if ((transform.position.y + scrollSp) > maxHeight)
+            {
+                scrollSp = maxHeight - transform.position.y;
+            }
+            else if ((transform.position.y + scrollSp) < minHeight)
+            {
+                scrollSp = minHeight - transform.position.y;
+            }
+
+
+            Vector3 verticalMove = new Vector3(0, scrollSp, 0);
+            Vector3 lateralMove = hsp * transform.right;
+            Vector3 forwardMove = transform.forward;
+            forwardMove.y = 0;
+            forwardMove.Normalize();
+            forwardMove *= vsp;
+
+            Vector3 move = verticalMove + lateralMove + forwardMove;
+
+            transform.position += move * Time.deltaTime;
+
+            updateCameraRotation();
         }
-        else
-        {
-            speed = 35f;
-            zoomSpeed = 1000.0f;
-        }
-
-        float hsp = speed * Input.GetAxis("Horizontal");
-        float vsp = speed * Input.GetAxis("Vertical");
-
-        float scrollSp = Mathf.Log(transform.position.y) * -zoomSpeed * Input.GetAxis("Mouse ScrollWheel");
-
-
-        if ((transform.position.y >= maxHeight) && (scrollSp > 0))
-        {
-            scrollSp = 0;
-        }
-        else if((transform.position.y <= minHeight) && (scrollSp < 0))
-        {
-            scrollSp = 0;
-        }
-
-        if ((transform.position.y + scrollSp) > maxHeight)
-        {
-            scrollSp = maxHeight - transform.position.y;
-        }
-        else if ((transform.position.y + scrollSp) < minHeight)
-        {
-            scrollSp = minHeight - transform.position.y;
-        }
-
-
-        Vector3 verticalMove = new Vector3(0, scrollSp, 0);
-        Vector3 lateralMove = hsp * transform.right;
-        Vector3 forwardMove = transform.forward;
-        forwardMove.y = 0;
-        forwardMove.Normalize();
-        forwardMove *= vsp;
-
-        Vector3 move = verticalMove + lateralMove + forwardMove;
-
-        transform.position += move * Time.deltaTime;
-
-        updateCameraRotation();
     }
 
     void updateCameraRotation()
