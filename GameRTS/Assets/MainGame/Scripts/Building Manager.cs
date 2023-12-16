@@ -98,8 +98,9 @@ public class BuildingManager : MonoBehaviour
         //PhotonNetwork.Instantiate(selectedBuilding.name, new Vector3(2.73f,4.68f,65.04f), Quaternion.Euler(0, 90, 0));
         if (prefabName.Contains("archer"))
         {
-            Debug.Log("Archer is upgraded.");
-            archeryardPrefabA.GetComponent<Health>().health = 300f;
+            Debug.Log("Archeryrange is upgraded.");
+            GameObject archeryard = GameObject.FindGameObjectWithTag("archeryrangeA");
+            archeryard.gameObject.GetComponent<Health>().health = 300;
             user.gameObject.GetComponent<User>().wood -= archeryardPrefabA.GetComponent<Building>().cost;
             HideUpgradePanel();
         }
@@ -107,7 +108,8 @@ public class BuildingManager : MonoBehaviour
         if (prefabName.Contains("lumbermill"))
         {
             Debug.Log("Lumbermill is upgraded.");
-            lumbermillPrefabA.GetComponent<Health>().health = 300f;
+            GameObject lumbermill = GameObject.FindGameObjectWithTag("lumbermillA");
+            lumbermill.gameObject.GetComponent<Health>().health = 300;
             user.gameObject.GetComponent<User>().wood -= lumbermillPrefabA.GetComponent<Building>().cost;
             HideUpgradePanel();
         }
@@ -115,7 +117,8 @@ public class BuildingManager : MonoBehaviour
         if (prefabName.Contains("castle"))
         {
             Debug.Log("Castle is upgraded.");
-            castlePrefabA.GetComponent<Health>().health = 500f;
+            GameObject castle = GameObject.FindGameObjectWithTag("castleA");
+            castle.gameObject.GetComponent<Health>().health = 500;
             user.gameObject.GetComponent<User>().wood -= castlePrefabA.GetComponent<Building>().cost;
             HideUpgradePanel();
         }

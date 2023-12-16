@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Photon.Pun;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -46,7 +47,7 @@ namespace MainGame.Scripts
                 
                 for(int i = 0; i < Int32.Parse(archerCount.text); i++)
                 {
-                    Instantiate(archerPrefabA, archerInstantiatePosition, Quaternion.Euler(0, -90, 0));
+                    PhotonNetwork.Instantiate(archerPrefabA.name, archerInstantiatePosition, Quaternion.Euler(0, -90, 0));
                     user.gameObject.GetComponent<User>().coin -= archerPrefabA.GetComponent<Unit>().cost;
                     archerInstantiatePosition -= addedPosition;
                 }
@@ -62,7 +63,7 @@ namespace MainGame.Scripts
                 
                 for(int i = 0; i < Int32.Parse(swatCount.text); i++)
                 {
-                    Instantiate(swatPrefabA, swatInstantiatePosition, Quaternion.Euler(0, -90, 0));
+                    PhotonNetwork.Instantiate(swatPrefabA.name, swatInstantiatePosition, Quaternion.Euler(0, -90, 0));
                     user.gameObject.GetComponent<User>().coin -= archerPrefabA.GetComponent<Unit>().cost;
                     swatInstantiatePosition -= addedPosition;
                 }
@@ -87,12 +88,12 @@ namespace MainGame.Scripts
                 {
                     if (buyAttemptCount > 0)
                     {
-                        Instantiate(woodCutterPrefabA, woodInstantiatePosition, Quaternion.Euler(0, -90, 0));
+                        PhotonNetwork.Instantiate(woodCutterPrefabA.name, woodInstantiatePosition, Quaternion.Euler(0, -90, 0));
                         woodInstantiatePosition -= addedPosition;
                     }
                     else
                     {
-                        Instantiate(woodCutterPrefabA, woodInstantiatePosition, Quaternion.Euler(0, -90, 0));
+                        PhotonNetwork.Instantiate(woodCutterPrefabA.name, woodInstantiatePosition, Quaternion.Euler(0, -90, 0));
                         woodInstantiatePosition -= addedPosition;
                     }
                     
