@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 public class Cutter : MonoBehaviour, IAction
@@ -10,12 +11,14 @@ public class Cutter : MonoBehaviour, IAction
 
     Transform targetObject;
     float timeSinceLastAttack;
+
     private void Start()
     {
         axRange = 2.0f;
         axDamage = 10f;
         timeBetweenAttacks = 1f;
     }
+
     private void Update()
     {
         timeSinceLastAttack += Time.deltaTime;
@@ -24,21 +27,25 @@ public class Cutter : MonoBehaviour, IAction
         {
             return;
         }
+
         bool isInRange = Vector3.Distance(transform.position, targetObject.position) < axRange;
         if (isInRange == false)
         {
-            GetComponent<MoverWoodCutter>().MoveTo(targetObject.position);
+            GetComponent<MoverWoodCutter>().gameObject.GetComponent<PhotonView>()
+                .RPC("MoveTo", RpcTarget.All, targetObject.position);
         }
         else
         {
-            AttackMethod();
-            GetComponent<MoverWoodCutter>().Cancel();
+            GetComponent<PhotonView>().RPC("AttackMethod", RpcTarget.All, null);
+            GetComponent<MoverWoodCutter>().gameObject.GetComponent<PhotonView>().RPC("Cancel", RpcTarget.All, null);
+
         }
     }
+
     void Hit()
     {
         HealthTree health = targetObject.GetComponent<HealthTree>();
-        health.TakeDamage(axDamage);
+        health.gameObject.GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.All, axDamage);
     }
 
     private void AttackMethod()
@@ -51,13 +58,13 @@ public class Cutter : MonoBehaviour, IAction
     }
 
 
-
     public void Attack(Tree target)
     {
         GetComponent<ActionScheduler>().StartAction(this);
         targetObject = target.transform;
         //Debug.Log("Attack is done");
     }
+
     public void Cancel()
     {
         targetObject = null;

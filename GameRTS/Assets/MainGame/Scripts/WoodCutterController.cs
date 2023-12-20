@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 public class WoodCutterController : MonoBehaviour
@@ -44,7 +45,7 @@ public class WoodCutterController : MonoBehaviour
         {
             if (Input.GetMouseButton(0))
             {
-                GetComponent<MoverWoodCutter>().StartMoveAction(hit.point);
+                GetComponent<MoverWoodCutter>().gameObject.GetComponent<PhotonView>().RPC("StartMoveAction", RpcTarget.All, hit.point);
                 //Debug.Log("Move");
             }
             return true;

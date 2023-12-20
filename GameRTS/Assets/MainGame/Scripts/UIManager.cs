@@ -19,13 +19,13 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         ShowMenuButton();
-        FillTopDisplay();
     }
 
     // Update is called once per frame
     void Update()
     {
-        FillTopDisplay();
+        StartCoroutine(Wait());
+       FillTopDisplay();
     }
     
     public void ShowMenuButton()
@@ -55,9 +55,16 @@ public class UIManager : MonoBehaviour
     public void FillTopDisplay()
     {
         GameObject castle = GameObject.FindGameObjectWithTag("castleA");
+        Debug.Log(castle);
+        
         healthBar.gameObject.GetComponent<TextMeshProUGUI>().text =
             castle.gameObject.GetComponent<Health>().GetHealth().ToString();
         woodBar.gameObject.GetComponent<TextMeshProUGUI>().text = user.gameObject.GetComponent<User>().wood.ToString();
         coinBar.gameObject.GetComponent<TextMeshProUGUI>().text = user.gameObject.GetComponent<User>().coin.ToString();
+    }
+    
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(1);
     }
 }

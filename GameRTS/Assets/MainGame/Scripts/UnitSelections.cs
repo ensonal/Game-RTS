@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 public class UnitSelections : MonoBehaviour
@@ -8,7 +9,11 @@ public class UnitSelections : MonoBehaviour
     public List<GameObject> unitSelected = new List<GameObject>();
 
     private static UnitSelections _instance;
-    public static UnitSelections Instance { get { return _instance; } }
+
+    public static UnitSelections Instance
+    {
+        get { return _instance; }
+    }
 
     private void Awake()
     {
@@ -24,13 +29,14 @@ public class UnitSelections : MonoBehaviour
 
     public void ClickSelect(GameObject unitToAdd)
     {
-        if(unitToAdd.GetComponent<Mover>() != null) {
-
+        if (unitToAdd.GetComponent<Mover>() != null)
+        {
             DeselectAll();
             unitSelected.Add(unitToAdd);
             unitToAdd.GetComponent<Mover>().selectedFlag = true;
             unitToAdd.transform.GetChild(0).gameObject.SetActive(true);
-        }else if(unitToAdd.GetComponent<MoverWoodCutter>() != null)
+        }
+        else if (unitToAdd.GetComponent<MoverWoodCutter>() != null)
         {
             DeselectAll();
             unitSelected.Add(unitToAdd);
@@ -41,7 +47,6 @@ public class UnitSelections : MonoBehaviour
 
     public void ShiftClickSelect(GameObject unitToAdd)
     {
-
         if (!unitSelected.Contains(unitToAdd))
         {
             if (unitToAdd.GetComponent<Mover>() != null)
@@ -49,7 +54,8 @@ public class UnitSelections : MonoBehaviour
                 unitSelected.Add(unitToAdd);
                 unitToAdd.GetComponent<Mover>().selectedFlag = true;
                 unitToAdd.transform.GetChild(0).gameObject.SetActive(true);
-            }else if(unitToAdd.GetComponent<MoverWoodCutter>() != null)
+            }
+            else if (unitToAdd.GetComponent<MoverWoodCutter>() != null)
             {
                 unitSelected.Add(unitToAdd);
                 unitToAdd.GetComponent<MoverWoodCutter>().selectedFlag = true;
@@ -62,7 +68,8 @@ public class UnitSelections : MonoBehaviour
             {
                 unitToAdd.GetComponent<Mover>().selectedFlag = false;
                 unitSelected.Remove(unitToAdd);
-            }else if (unitToAdd.GetComponent<MoverWoodCutter>() != null)
+            }
+            else if (unitToAdd.GetComponent<MoverWoodCutter>() != null)
             {
                 unitToAdd.GetComponent<MoverWoodCutter>().selectedFlag = false;
                 unitSelected.Remove(unitToAdd);
@@ -78,16 +85,14 @@ public class UnitSelections : MonoBehaviour
             {
                 unit.GetComponent<Mover>().selectedFlag = false;
                 unit.transform.GetChild(0).gameObject.SetActive(false);
-            }else if(unit.GetComponent<MoverWoodCutter>() != null)
+            }
+            else if (unit.GetComponent<MoverWoodCutter>() != null)
             {
                 unit.GetComponent<MoverWoodCutter>().selectedFlag = false;
                 unit.transform.GetChild(0).gameObject.SetActive(false);
             }
         }
-        
+
         unitSelected.Clear();
-
     }
-
-    
 }

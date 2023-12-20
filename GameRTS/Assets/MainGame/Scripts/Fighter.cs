@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 public class Fighter : MonoBehaviour, IAction
@@ -28,17 +29,17 @@ public class Fighter : MonoBehaviour, IAction
         bool isInRange = Vector3.Distance(transform.position, targetObject.position) < weaponRange;
         if (isInRange == false)
         {
-            GetComponent<Mover>().MoveTo(targetObject.position);
+            GetComponent<Mover>().gameObject.GetComponent<PhotonView>().RPC("MoveTo", RpcTarget.All, targetObject.position);
         }else
         {
-            AttackMethod();
-            GetComponent<Mover>().Cancel();
+            GetComponent<PhotonView>().RPC("AttackMethod", RpcTarget.All, null);
+            GetComponent<Mover>().gameObject.GetComponent<PhotonView>().RPC("Cancel", RpcTarget.All, null);
         }
     }
     void Hit()
     {
         Health health = targetObject.GetComponent<Health>();
-        health.TakeDamage(weaponDamage);
+        health.gameObject.GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.All, weaponDamage);
     }
 
     private void AttackMethod()

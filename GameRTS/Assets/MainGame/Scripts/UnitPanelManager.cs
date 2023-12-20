@@ -63,8 +63,9 @@ namespace MainGame.Scripts
                 
                 for(int i = 0; i < Int32.Parse(swatCount.text); i++)
                 {
+                    Debug.Log("Swat was bought. check");
                     PhotonNetwork.Instantiate(swatPrefabA.name, swatInstantiatePosition, Quaternion.Euler(0, -90, 0));
-                    user.gameObject.GetComponent<User>().coin -= archerPrefabA.GetComponent<Unit>().cost;
+                    user.gameObject.GetComponent<User>().coin -= swatPrefabA.GetComponent<Unit>().cost;
                     swatInstantiatePosition -= addedPosition;
                 }
                 
@@ -80,7 +81,7 @@ namespace MainGame.Scripts
                 if (buyAttemptCount > 0)
                 {
                     woodInstantiatePosition += addedPosition2;
-                    user.gameObject.GetComponent<User>().coin -= archerPrefabA.GetComponent<Unit>().cost;
+                    user.gameObject.GetComponent<User>().coin -= woodCutterPrefabA.GetComponent<Unit>().cost;
                     addedPosition2 += addedPosition2;
                 }
                 
@@ -155,17 +156,18 @@ namespace MainGame.Scripts
         private void PopulateUnitPanel()
         {
             Debug.Log("PopulateUpgradePanel method is called.");
-            units = new List<Unit>(Resources.LoadAll<Unit>("Units"));
             
-            units.Sort((x, y) => x.cost.CompareTo(y.cost));
-
-            for (int i = 0; i < Mathf.Min(units.Count, nameTexts.Length); i++)
-            {
-                Debug.Log("units.Count: " + units[i]);
-                nameTexts[i].text = units[i].name;
-                costTexts[i].text = units[i].cost.ToString();
-                images[i].sprite = units[i].sprite;
-            }
+            nameTexts[2].text = swatPrefabA.GetComponent<Unit>().name;
+            nameTexts[1].text = archerPrefabA.GetComponent<Unit>().name;
+            nameTexts[0].text = woodCutterPrefabA.GetComponent<Unit>().name;
+            
+            costTexts[2].text = swatPrefabA.GetComponent<Unit>().cost.ToString();
+            costTexts[1].text = archerPrefabA.GetComponent<Unit>().cost.ToString();
+            costTexts[0].text = woodCutterPrefabA.GetComponent<Unit>().cost.ToString();
+            
+            images[2].sprite = swatPrefabA.GetComponent<Unit>().sprite;
+            images[1].sprite = archerPrefabA.GetComponent<Unit>().sprite;
+            images[0].sprite = woodCutterPrefabA.GetComponent<Unit>().sprite;
         }
         
         public void IncreaseSwatCount()

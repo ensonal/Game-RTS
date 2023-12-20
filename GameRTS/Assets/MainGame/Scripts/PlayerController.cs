@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -44,7 +45,7 @@ public class PlayerController : MonoBehaviour
         {
             if(Input.GetMouseButton(0))
             {
-                GetComponent<Mover>().StartMoveAction(hit.point);
+                GetComponent<Mover>().gameObject.GetComponent<PhotonView>().RPC("StartMoveAction", RpcTarget.All, hit.point);
                 //Debug.Log("Move");
             }
             return true;

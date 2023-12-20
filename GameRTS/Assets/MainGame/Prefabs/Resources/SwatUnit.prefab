@@ -1199,7 +1199,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4959867523544442054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.178, z: 0}
+  m_LocalPosition: {x: 0, y: -0.746, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1508,7 +1508,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a77276b82e2624d53b9f11e2799ca7a8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e2d41369b98d143bda63b622a22f43dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1516,7 +1516,7 @@ SpriteRenderer:
   m_Size: {x: 5, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &5435880295111551230
@@ -2304,7 +2304,7 @@ GameObject:
   - component: {fileID: 2558744351849899647}
   m_Layer: 8
   m_Name: SwatUnit
-  m_TagString: Fighter
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2321,8 +2321,8 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2363932869069766215}
   - {fileID: 3316456482498394747}
+  - {fileID: 2363932869069766215}
   - {fileID: 7737870737548774680}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2414,8 +2414,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Swat
   cost: 300
-  sprite: {fileID: 21300000, guid: 21674d20a45d844099ad1872557437c3, type: 3}
-  selectedRing: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 8f4b324d8064041159651cd05df0adeb, type: 3}
+  selectedRing: {fileID: 21300000, guid: e2d41369b98d143bda63b622a22f43dd, type: 3}
 --- !u!114 &385319643328490169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2428,7 +2428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 327a05d063f3082449afe40a1b9ff710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 300
   healthBar: {fileID: 2363932869069766331}
 --- !u!114 &385319643328490174
 MonoBehaviour:
@@ -3129,6 +3129,10 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5947298644050820073, guid: c35bde4fc9e7e4aad95635022629af32, type: 3}
+      propertyPath: _cameraParent
+      value: 
+      objectReference: {fileID: 9036618506159285700, guid: b378e055f60a5eb4c86cedd5a5964a25, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

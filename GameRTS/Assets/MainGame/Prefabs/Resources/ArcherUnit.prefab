@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: -6738250226972981557}
   m_Layer: 8
   m_Name: ArcherUnit
-  m_TagString: Fighter
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,8 +76,8 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4300752656996849719}
   - {fileID: 452254487799446905}
+  - {fileID: 4300752656996849719}
   - {fileID: 185063086817282843}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -169,8 +169,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Archer
   cost: 200
-  sprite: {fileID: 21300000, guid: e13ec9f5391d947f9912dd520d749762, type: 3}
-  selectedRing: {fileID: 0}
+  sprite: {fileID: 21300000, guid: ab3d6e4bb1139436496fcb0ff8a82ab9, type: 3}
+  selectedRing: {fileID: 21300000, guid: e2d41369b98d143bda63b622a22f43dd, type: 3}
 --- !u!114 &4816535118453932090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 327a05d063f3082449afe40a1b9ff710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 200
   healthBar: {fileID: 4300752656996849867}
 --- !u!114 &4816535118453932091
 MonoBehaviour:
@@ -1491,7 +1491,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4184416847392747415}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.132, y: 0.004, z: -0.023}
+  m_LocalPosition: {x: -0, y: 0.004, z: -0.023}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1539,7 +1539,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a77276b82e2624d53b9f11e2799ca7a8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e2d41369b98d143bda63b622a22f43dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1547,7 +1547,7 @@ SpriteRenderer:
   m_Size: {x: 5, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &4195791069239489325
@@ -2587,7 +2587,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8583568827649083346}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.25715065, y: -0.006, z: 0.025}
+  m_LocalPosition: {x: -0, y: -0.856, z: 0.025}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:

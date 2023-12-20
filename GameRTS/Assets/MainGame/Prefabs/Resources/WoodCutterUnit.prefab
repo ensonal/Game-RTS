@@ -588,7 +588,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a77276b82e2624d53b9f11e2799ca7a8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e2d41369b98d143bda63b622a22f43dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -596,7 +596,7 @@ SpriteRenderer:
   m_Size: {x: 5, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2227482764239762885
@@ -1390,9 +1390,10 @@ GameObject:
   - component: {fileID: -6763079874757359247}
   - component: {fileID: -2832881663148454384}
   - component: {fileID: 6588381992565296039}
+  - component: {fileID: 4835765030102594954}
   m_Layer: 8
   m_Name: WoodCutterUnit
-  m_TagString: Citizen
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1409,8 +1410,8 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7734884161852208039}
   - {fileID: 664766878978725403}
+  - {fileID: 7734884161852208039}
   - {fileID: 5923636506462945532}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1502,8 +1503,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Wood Cutter
   cost: 100
-  sprite: {fileID: 21300000, guid: 3e384fc2e0d8645e08985d714a3614c0, type: 3}
-  selectedRing: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 10a146c1ba512415e9eaf7fb61b8abd9, type: 3}
+  selectedRing: {fileID: 21300000, guid: e2d41369b98d143bda63b622a22f43dd, type: 3}
 --- !u!114 &6178452128728839138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1678,6 +1679,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   healthBar: {fileID: 7734884161852207963}
+--- !u!114 &4835765030102594954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6178452128728839148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dbacc3a0d16bc046bba1e70e2e0cf9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6448922291634100806
 GameObject:
   m_ObjectHideFlags: 0
@@ -2025,7 +2038,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7818252594285648205}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.178, z: 0}
+  m_LocalPosition: {x: 0, y: -0.469, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2515,6 +2528,10 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5947298644050820073, guid: c35bde4fc9e7e4aad95635022629af32, type: 3}
+      propertyPath: _cameraParent
+      value: 
+      objectReference: {fileID: 9036618506159285700, guid: b378e055f60a5eb4c86cedd5a5964a25, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

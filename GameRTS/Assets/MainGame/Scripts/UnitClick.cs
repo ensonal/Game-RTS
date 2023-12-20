@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
-public class UnitClick : MonoBehaviour
+public class UnitClick : MonoBehaviourPunCallbacks
 {
-    public Camera myCam;
+    public GameObject cameraParent;
 
     public LayerMask clickable;
     public LayerMask ground;
 
+    private Camera myCam;
+
     // Start is called before the first frame update
     void Start()
     {
-        myCam = Camera.main;
+        myCam = cameraParent.GetComponentInChildren<Camera>();
     }
 
     // Update is called once per frame
@@ -25,6 +28,7 @@ public class UnitClick : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, clickable))
             {
+                Debug.Log("Clicked on " + hit.collider.gameObject.name);
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
                     UnitSelections.Instance.ShiftClickSelect(hit.collider.gameObject);
@@ -34,7 +38,6 @@ public class UnitClick : MonoBehaviour
                     UnitSelections.Instance.ClickSelect(hit.collider.gameObject);
                     Debug.Log(hit.collider.gameObject.name);
                 }
-                
             }
             else
             {
@@ -42,13 +45,7 @@ public class UnitClick : MonoBehaviour
                 {
                     UnitSelections.Instance.DeselectAll();
                 }
-
-
             }
         }
-        
-
     }
-
 }
-

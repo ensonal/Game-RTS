@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -16,6 +17,8 @@ public class Mover : MonoBehaviour, IAction
     {
         UpdateAnimator();
     }
+    
+    [PunRPC]
     public void StartMoveAction(Vector3 hit)
     {
         if(selectedFlag == true)
@@ -27,6 +30,8 @@ public class Mover : MonoBehaviour, IAction
         }
        
     }
+    
+    [PunRPC]
     public void MoveTo(Vector3 hit)
     {
         if (selectedFlag == true)
@@ -38,6 +43,7 @@ public class Mover : MonoBehaviour, IAction
        
     }
 
+    [PunRPC]
     public void Cancel()
     {
         GetComponent<NavMeshAgent>().isStopped = true;
