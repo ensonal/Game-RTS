@@ -20,15 +20,14 @@ public class RTSCameraController : MonoBehaviourPunCallbacks
         pw = GetComponent<PhotonView>();
         if (!pw.IsMine)
         {
-            Destroy(GetComponentInChildren<Camera>().gameObject);
-            Destroy(this);
+            GetComponent<RTSCameraController>().enabled = false;
+            GetComponentInChildren<Camera>().enabled = false;
         }
     }
 
     private void Update()
     {
-        if (pw.IsMine)
-        {
+        
             if (Input.GetKey(KeyCode.LeftShift))
             {
 
@@ -79,7 +78,7 @@ public class RTSCameraController : MonoBehaviourPunCallbacks
             transform.position += move * Time.deltaTime;
 
             updateCameraRotation();
-        }
+        
     }
 
     void updateCameraRotation()
