@@ -10,12 +10,12 @@ public class Unit : MonoBehaviour
     [SerializeField] public Sprite selectedRing;
     void Start()
     {
-        UnitSelections.Instance.unitList.Add(this.gameObject);
+        
     }
 
     private void OnDestroy()
     {
-        UnitSelections.Instance.unitList.Remove(this.gameObject);
+    
     }
     
 }

@@ -48,6 +48,7 @@ public class Cutter : MonoBehaviour, IAction
         health.gameObject.GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.All, axDamage);
     }
 
+    [PunRPC]
     private void AttackMethod()
     {
         if (timeSinceLastAttack > timeBetweenAttacks)

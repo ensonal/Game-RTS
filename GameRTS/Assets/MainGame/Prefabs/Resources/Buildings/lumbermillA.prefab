@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4905385659050678346}
   - component: {fileID: 1864877414331851267}
   - component: {fileID: 9201416133294498689}
+  - component: {fileID: -5533241235143841959}
   m_Layer: 0
   m_Name: lumbermillA
   m_TagString: lumbermillA
@@ -177,6 +178,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.8240385, y: 1.4695373, z: 1.6574843}
   m_Center: {x: 0.004535407, y: 0.71906364, z: 0.022126555}
+--- !u!114 &-5533241235143841959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5491560384211002521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1001 &7149829005464429270
 PrefabInstance:
   m_ObjectHideFlags: 0

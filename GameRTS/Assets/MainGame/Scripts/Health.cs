@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class Health : MonoBehaviourPunCallbacks
 {
    
     [SerializeField] public float health;
@@ -26,6 +27,7 @@ public class Health : MonoBehaviour
         healthBar.UpdateHealthBar(maxHealth, health);
     }
 
+    [PunRPC]
     public void TakeDamage(float damage)
     {
         health = Mathf.Max(health - damage, 0);

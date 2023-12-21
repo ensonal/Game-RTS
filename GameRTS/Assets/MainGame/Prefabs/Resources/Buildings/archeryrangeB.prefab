@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7907232194735411317}
   - component: {fileID: 1762160646389584364}
   - component: {fileID: 8210623768065311856}
+  - component: {fileID: 1124157380922171576}
   m_Layer: 0
   m_Name: archeryrangeB
   m_TagString: archeryrangeB
@@ -178,6 +179,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 300
   healthBar: {fileID: 5947298644050820073, guid: c35bde4fc9e7e4aad95635022629af32, type: 3}
+--- !u!114 &1124157380922171576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595388390487025735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1001 &666098283583665287
 PrefabInstance:
   m_ObjectHideFlags: 0

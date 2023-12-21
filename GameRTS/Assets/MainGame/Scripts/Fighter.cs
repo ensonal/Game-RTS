@@ -29,24 +29,29 @@ public class Fighter : MonoBehaviour, IAction
         bool isInRange = Vector3.Distance(transform.position, targetObject.position) < weaponRange;
         if (isInRange == false)
         {
+            Debug.Log("isInRange is false moveto çalıştı");
             GetComponent<Mover>().gameObject.GetComponent<PhotonView>().RPC("MoveTo", RpcTarget.All, targetObject.position);
         }else
         {
+            Debug.Log("isInRange is true attack çalıştı");
             GetComponent<PhotonView>().RPC("AttackMethod", RpcTarget.All, null);
             GetComponent<Mover>().gameObject.GetComponent<PhotonView>().RPC("Cancel", RpcTarget.All, null);
         }
     }
+    
     void Hit()
     {
         Health health = targetObject.GetComponent<Health>();
         health.gameObject.GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.All, weaponDamage);
     }
 
+    [PunRPC]
     private void AttackMethod()
     {
         if(timeSinceLastAttack > timeBetweenAttacks)
         {
             GetComponent<Animator>().SetTrigger("attack");
+            Hit();
             timeSinceLastAttack = 0;
         }
     }
