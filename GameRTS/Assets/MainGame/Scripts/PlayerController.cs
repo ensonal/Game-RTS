@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Photon.Pun;
+﻿using Photon.Pun;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -16,7 +14,6 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
-        //Debug.Log("Nothing");
     }
     private bool InteractWithCombat()
     {

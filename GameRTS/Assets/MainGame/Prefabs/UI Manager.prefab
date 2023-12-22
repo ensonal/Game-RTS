@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1a10e614b8b040feb6242b2ab5432fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MainCanvas: {fileID: 8953103214468013236, guid: b344170132f1e489aa6f150bc7121f37, type: 3}
   menuButton: {fileID: 0}
-  castleButton: {fileID: 0}
   unitButton: {fileID: 0}
   closeButton: {fileID: 0}
   buildingButton: {fileID: 0}
@@ -53,4 +53,3 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   woodBar: {fileID: 0}
   coinBar: {fileID: 0}
-  castle: {fileID: 2149138306500054904, guid: 6d7ad02f33138b349bc02ccea7dbfac5, type: 3}

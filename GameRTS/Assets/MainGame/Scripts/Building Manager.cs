@@ -8,12 +8,10 @@ using UnityEngine.UI;
 
 public class BuildingManager : MonoBehaviour
 {
-    public static BuildingManager instance;
-
     [SerializeField] private GameObject upgradePanel;
     [SerializeField] private TextMeshProUGUI[] nameTexts;
     [SerializeField] private TextMeshProUGUI[] costTexts;
-    [SerializeField] private Image[] images;
+    [SerializeField] private Sprite[] images;
     [SerializeField] private GameObject castlePrefabA;
     [SerializeField] private GameObject lumbermillPrefabA;
     [SerializeField] private GameObject archeryardPrefabA;
@@ -21,42 +19,16 @@ public class BuildingManager : MonoBehaviour
     [SerializeField] private GameObject lumbermillPrefabB;
     [SerializeField] private GameObject archeryardPrefabB;
     [SerializeField] private GameObject user;
+    [SerializeField] private GameObject cameraParent;
 
-    private List<GameObject> buildingInScene = new();
+
     private GameObject selectedBuilding;
     private List<Building> buildings;
     private int coroutineCountToStart = 0;
 
-    private void Awake()
-    {
-        if (instance == null)
-            instance = this;
-        else
-            Destroy(gameObject);
-    }
-
     void Start()
     {
-        castlePrefabA.transform.localScale = new Vector3(4, 4, 4);
-        Instantiate(castlePrefabA, new Vector3(63.7f, 9.99f, 61.1f), Quaternion.Euler(0, -90, 0));
-        lumbermillPrefabA.transform.localScale = new Vector3(3, 3, 3);
-        Instantiate(lumbermillPrefabA, new Vector3(75.47f, 9.99f, 74.1f), Quaternion.Euler(0, -90, 0));
-        archeryardPrefabA.transform.localScale = new Vector3(3, 3, 3);
-        Instantiate(archeryardPrefabA, new Vector3(75.47f, 9.99f, 66.94f), Quaternion.Euler(0, -90, 0));
-
-        castlePrefabB.transform.localScale = new Vector3(4, 4, 4);
-        Instantiate(castlePrefabB, new Vector3(2.9f, 9.99f, 65.4f), Quaternion.Euler(0, 90, 0));
-        lumbermillPrefabB.transform.localScale = new Vector3(3, 3, 3);
-        Instantiate(lumbermillPrefabB, new Vector3(-10.8f, 9.99f, 74.1f), Quaternion.Euler(0, 90, 0));
-        archeryardPrefabB.transform.localScale = new Vector3(3, 3, 3);
-        Instantiate(archeryardPrefabB, new Vector3(-12.3f, 9.99f, 58.9f), Quaternion.Euler(0, 90, 0));
-
-        buildingInScene.Add(castlePrefabA);
-        buildingInScene.Add(lumbermillPrefabA);
-        buildingInScene.Add(archeryardPrefabA);
-        buildingInScene.Add(castlePrefabB);
-        buildingInScene.Add(lumbermillPrefabB);
-        buildingInScene.Add(archeryardPrefabB);
+        Debug.Log((upgradePanel.name + " is found."));
     }
 
     void Update()
@@ -65,10 +37,13 @@ public class BuildingManager : MonoBehaviour
         {
             StartCoroutine(WaitForStartGame());
         }
+        Debug.Log((upgradePanel.name + " is found."));
+
     }
 
     public void ShowUpgradePanel()
     {
+        Debug.Log(upgradePanel.name + " is activated.");
         upgradePanel.SetActive(true);
         PopulateUpgradePanel();
     }
@@ -87,7 +62,7 @@ public class BuildingManager : MonoBehaviour
         {
             nameTexts[i].text = buildings[i].name;
             costTexts[i].text = buildings[i].cost.ToString();
-            images[i].sprite = buildings[i].sprite;
+            images[i] = buildings[i].sprite;
         }
     }
 
@@ -120,6 +95,33 @@ public class BuildingManager : MonoBehaviour
             GameObject castle = GameObject.FindGameObjectWithTag("castleA");
             castle.gameObject.GetComponent<Health>().health = 500;
             user.gameObject.GetComponent<User>().wood -= castlePrefabA.GetComponent<Building>().cost;
+            HideUpgradePanel();
+        }
+        
+        if (prefabName.Contains("archer"))
+        {
+            Debug.Log("Archeryrange is upgraded.");
+            GameObject archeryard = GameObject.FindGameObjectWithTag("archeryrangeB");
+            archeryard.gameObject.GetComponent<Health>().health = 300;
+            user.gameObject.GetComponent<User>().wood -= archeryardPrefabB.GetComponent<Building>().cost;
+            HideUpgradePanel();
+        }
+        
+        if (prefabName.Contains("lumbermill"))
+        {
+            Debug.Log("Lumbermill is upgraded.");
+            GameObject lumbermill = GameObject.FindGameObjectWithTag("lumbermillB");
+            lumbermill.gameObject.GetComponent<Health>().health = 300;
+            user.gameObject.GetComponent<User>().wood -= lumbermillPrefabB.GetComponent<Building>().cost;
+            HideUpgradePanel();
+        }
+        
+        if (prefabName.Contains("castle"))
+        {
+            Debug.Log("Castle is upgraded.");
+            GameObject castle = GameObject.FindGameObjectWithTag("castleB");
+            castle.gameObject.GetComponent<Health>().health = 500;
+            user.gameObject.GetComponent<User>().wood -= castlePrefabB.GetComponent<Building>().cost;
             HideUpgradePanel();
         }
     }

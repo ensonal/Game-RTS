@@ -1,1 +1,1 @@
-C:\Users\Egemen\Documents\Lessons\Game\Game-RTS\GameRTS
+/Users/enesonal/Documents/Game-RTS/GameRTS

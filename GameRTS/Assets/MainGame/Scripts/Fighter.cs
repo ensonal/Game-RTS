@@ -41,6 +41,7 @@ public class Fighter : MonoBehaviour, IAction
     
     void Hit()
     {
+        Debug.Log(targetObject.name + "hit");
         Health health = targetObject.GetComponent<Health>();
         health.gameObject.GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.All, weaponDamage);
     }
@@ -60,7 +61,7 @@ public class Fighter : MonoBehaviour, IAction
    {
         GetComponent<ActionScheduler>().StartAction(this);
         targetObject = target.transform;
-        //Debug.Log("Attack is done");
+        Debug.Log("Attack is done");
    }
     public void Cancel()
     {

@@ -40,7 +40,6 @@ public class Mover : MonoBehaviour, IAction
             GetComponent<NavMeshAgent>().isStopped = false;
         }
 
-       
     }
 
     [PunRPC]

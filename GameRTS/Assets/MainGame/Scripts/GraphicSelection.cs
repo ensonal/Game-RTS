@@ -9,16 +9,12 @@ public class GraphicSelection : MonoBehaviour
 {
     GraphicRaycaster raycaster;
     PointerEventData pointerEventData;
-    EventSystem eventSystem;
     GameObject selectedObject;
-    // take EventSystem from the scene
-    [SerializeField] GameObject eventSystemInScene;
     
     // Start is called before the first frame update
     void Start()
     {
         raycaster = GetComponent<GraphicRaycaster>();
-        eventSystem = GetComponent<EventSystem>();
     }
 
     // Update is called once per frame
@@ -26,7 +22,7 @@ public class GraphicSelection : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            pointerEventData = new PointerEventData(eventSystem);
+            pointerEventData = new PointerEventData(EventSystem.current);
             pointerEventData.position = Input.mousePosition;
 
             List<RaycastResult> results = new List<RaycastResult>();
@@ -50,21 +46,18 @@ public class GraphicSelection : MonoBehaviour
                     if (button.gameObject.name == "Create Unit Button")
                     {
                         Debug.Log("Create Unit Button clicked!");
-                        eventSystemInScene.GameObject().SetActive(false);
                         ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
                     }
                     
                     if (button.gameObject.name == "Create Building Button")
                     {
                         Debug.Log("Create Building Button clicked!");
-                        eventSystemInScene.GameObject().SetActive(false);
                         ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
                     }
                     
                     if (button.gameObject.name == "Menu Button")
                     {
                         Debug.Log("Menu Button clicked!");
-                        eventSystemInScene.GameObject().SetActive(false);
                         ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
                     }
                     
@@ -78,56 +71,48 @@ public class GraphicSelection : MonoBehaviour
                     if (button.gameObject.name == "Archeryard Button")
                     {
                         Debug.Log("Archeryard Button clicked!");
-                        eventSystemInScene.GameObject().SetActive(false);
                         ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
                     }
                     
                     if (button.gameObject.name == "Castle Button")
                     {
                         Debug.Log("Castle Button clicked!");
-                        eventSystemInScene.GameObject().SetActive(false);
                         ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
                     }
                     
                     if (button.gameObject.name == "Lumbermill Button")
                     {
                         Debug.Log("Lumbermill Button clicked!");
-                        eventSystemInScene.GameObject().SetActive(false);
                         ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
                     }
                     
                     if (button.gameObject.name == "WoodCutter Button")
                     {
                         Debug.Log("WoodCutter Button clicked!");
-                        eventSystemInScene.GameObject().SetActive(false);
                         ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
                     }
                     
                     if (button.gameObject.name == "Swat Button")
                     {
                         Debug.Log("Swat Button clicked!");
-                        eventSystemInScene.GameObject().SetActive(false);
                         ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
                     }
                     
                     if (button.gameObject.name == "Archer Button")
                     {
                         Debug.Log("Archer Button clicked!");
-                        eventSystemInScene.GameObject().SetActive(false);
                         ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
                     }
                     
                     if(button.gameObject.name == "Plus Button")
                     {
                         Debug.Log("Plus Button clicked!");
-                        eventSystemInScene.GameObject().SetActive(false);
                         ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
                     }
                     
                     if(button.gameObject.name == "Minus Button")
                     {
                         Debug.Log("Minus Button clicked!");
-                        eventSystemInScene.GameObject().SetActive(false);
                         ExecuteEvents.Execute(button.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
                     }
   
@@ -140,7 +125,6 @@ public class GraphicSelection : MonoBehaviour
     {
         Debug.Log("worked WaitForEventSystem coroutine");
         yield return new WaitForSeconds(1);
-        eventSystemInScene.GameObject().SetActive(true);
         Debug.Log("waited 1 second");
     }
 }

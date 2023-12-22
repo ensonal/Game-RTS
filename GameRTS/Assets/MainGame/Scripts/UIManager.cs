@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -25,7 +27,7 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         StartCoroutine(Wait());
-       FillTopDisplay();
+        FillTopDisplay();
     }
     
     public void ShowMenuButton()
@@ -55,10 +57,10 @@ public class UIManager : MonoBehaviour
     public void FillTopDisplay()
     {
         GameObject castle = GameObject.FindGameObjectWithTag("castleA");
-        Debug.Log(castle);
+        Debug.Log(healthBar.gameObject.GetComponent<TextMeshProUGUI>().text);
         
         healthBar.gameObject.GetComponent<TextMeshProUGUI>().text =
-            castle.gameObject.GetComponent<Health>().GetHealth().ToString();
+            castle.gameObject.GetComponent<Health>().health.ToString();
         woodBar.gameObject.GetComponent<TextMeshProUGUI>().text = user.gameObject.GetComponent<User>().wood.ToString();
         coinBar.gameObject.GetComponent<TextMeshProUGUI>().text = user.gameObject.GetComponent<User>().coin.ToString();
     }

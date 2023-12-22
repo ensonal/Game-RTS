@@ -13,6 +13,8 @@ TagManager:
   - archeryrangeA
   - lumbermillA
   - lumbermillB
+  - UnitPanel
+  - BuildingPanel
   layers:
   - Default
   - TransparentFX

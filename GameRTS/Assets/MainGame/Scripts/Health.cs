@@ -30,6 +30,7 @@ public class Health : MonoBehaviourPunCallbacks
     [PunRPC]
     public void TakeDamage(float damage)
     {
+        Debug.Log("Take Damage RPC worked");
         health = Mathf.Max(health - damage, 0);
     }
     
