@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -5713967823069292195}
   - component: {fileID: 4748143833493924897}
   - component: {fileID: 7565676093901838501}
+  - component: {fileID: 2700190082719989999}
   m_Layer: 0
   m_Name: castleA
   m_TagString: castleA
@@ -124,7 +125,7 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
@@ -179,6 +180,27 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!65 &2700190082719989999
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2149138306500054904}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8048376, y: 2.532763, z: 1.8523474}
+  m_Center: {x: 0, y: 1.2406964, z: -0.023754895}
 --- !u!1 &8858125327383702098
 GameObject:
   m_ObjectHideFlags: 0
