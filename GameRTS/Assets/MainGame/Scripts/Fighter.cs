@@ -51,7 +51,7 @@ public class Fighter : MonoBehaviour, IAction
         if(timeSinceLastAttack > timeBetweenAttacks)
         {
             GetComponent<Animator>().SetTrigger("attack");
-            Hit();
+           
             timeSinceLastAttack = 0;
         }
     }
