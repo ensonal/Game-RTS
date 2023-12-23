@@ -369,7 +369,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8781732270491370344, guid: 9c83453d92212450dab9b504b02e4d83, type: 3}
+      - m_Target: {fileID: 620313305467286917}
         m_TargetAssemblyTypeName: MainGame.Scripts.UnitPanelManager, Assembly-CSharp
         m_MethodName: IncreaseWoodCutterCount
         m_Mode: 1
@@ -859,7 +859,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8781732270491370344, guid: 9c83453d92212450dab9b504b02e4d83, type: 3}
+      - m_Target: {fileID: 620313305467286917}
         m_TargetAssemblyTypeName: MainGame.Scripts.UnitPanelManager, Assembly-CSharp
         m_MethodName: IncreaseArcherCount
         m_Mode: 1
@@ -992,7 +992,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8781732270491370344, guid: 9c83453d92212450dab9b504b02e4d83, type: 3}
+      - m_Target: {fileID: 620313305467286917}
         m_TargetAssemblyTypeName: MainGame.Scripts.UnitPanelManager, Assembly-CSharp
         m_MethodName: CheckBalanceIsEnough
         m_Mode: 2
@@ -1004,7 +1004,7 @@ MonoBehaviour:
           m_StringArgument: castle.prefab
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3535898555835949933, guid: 8b33272acf55d4669b19afcec27677f8, type: 3}
+      - m_Target: {fileID: 4093778434922224347}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ShowMenuButton
         m_Mode: 1
@@ -1138,7 +1138,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8781732270491370344, guid: 9c83453d92212450dab9b504b02e4d83, type: 3}
+      - m_Target: {fileID: 620313305467286917}
         m_TargetAssemblyTypeName: MainGame.Scripts.UnitPanelManager, Assembly-CSharp
         m_MethodName: DecreaseArcherCount
         m_Mode: 1
@@ -1216,7 +1216,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 223faeffef0e24106a322a007021eaee, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2522,7 +2522,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8781732270491370344, guid: 9c83453d92212450dab9b504b02e4d83, type: 3}
+      - m_Target: {fileID: 620313305467286917}
         m_TargetAssemblyTypeName: MainGame.Scripts.UnitPanelManager, Assembly-CSharp
         m_MethodName: HideUnitPanel
         m_Mode: 1
@@ -2534,7 +2534,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3535898555835949933, guid: 8b33272acf55d4669b19afcec27677f8, type: 3}
+      - m_Target: {fileID: 4093778434922224347}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ShowMenuButton
         m_Mode: 1
@@ -2903,7 +2903,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: e9bf7ab6fcbaf47cba3c66e31334106c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3573,7 +3573,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8781732270491370344, guid: 9c83453d92212450dab9b504b02e4d83, type: 3}
+      - m_Target: {fileID: 620313305467286917}
         m_TargetAssemblyTypeName: MainGame.Scripts.UnitPanelManager, Assembly-CSharp
         m_MethodName: DecreaseSwatCount
         m_Mode: 1
@@ -3870,7 +3870,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8759095603365641119, guid: d705833ad62694fe0b513a5dd644bf1e, type: 3}
+      - m_Target: {fileID: 9116260841448449233}
         m_TargetAssemblyTypeName: BuildingManager, Assembly-CSharp
         m_MethodName: HideUpgradePanel
         m_Mode: 1
@@ -3882,7 +3882,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3535898555835949933, guid: 8b33272acf55d4669b19afcec27677f8, type: 3}
+      - m_Target: {fileID: 4093778434922224347}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ShowMenuButton
         m_Mode: 1
@@ -5143,7 +5143,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8781732270491370344, guid: 9c83453d92212450dab9b504b02e4d83, type: 3}
+      - m_Target: {fileID: 620313305467286917}
         m_TargetAssemblyTypeName: MainGame.Scripts.UnitPanelManager, Assembly-CSharp
         m_MethodName: CheckBalanceIsEnough
         m_Mode: 2
@@ -5155,7 +5155,7 @@ MonoBehaviour:
           m_StringArgument: lumbermill.prefab
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3535898555835949933, guid: 8b33272acf55d4669b19afcec27677f8, type: 3}
+      - m_Target: {fileID: 4093778434922224347}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ShowMenuButton
         m_Mode: 1
@@ -5601,7 +5601,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8759095603365641119, guid: d705833ad62694fe0b513a5dd644bf1e, type: 3}
+      - m_Target: {fileID: 9116260841448449233}
         m_TargetAssemblyTypeName: BuildingManager, Assembly-CSharp
         m_MethodName: CheckBalanceIsEnough
         m_Mode: 2
@@ -5613,7 +5613,7 @@ MonoBehaviour:
           m_StringArgument: castle.prefab
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3535898555835949933, guid: 8b33272acf55d4669b19afcec27677f8, type: 3}
+      - m_Target: {fileID: 4093778434922224347}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ShowMenuButton
         m_Mode: 1
@@ -6538,7 +6538,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8759095603365641119, guid: d705833ad62694fe0b513a5dd644bf1e, type: 3}
+      - m_Target: {fileID: 9116260841448449233}
         m_TargetAssemblyTypeName: BuildingManager, Assembly-CSharp
         m_MethodName: CheckBalanceIsEnough
         m_Mode: 2
@@ -6550,7 +6550,7 @@ MonoBehaviour:
           m_StringArgument: lumbermill.prefab
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3535898555835949933, guid: 8b33272acf55d4669b19afcec27677f8, type: 3}
+      - m_Target: {fileID: 4093778434922224347}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ShowMenuButton
         m_Mode: 1
@@ -7603,7 +7603,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8781732270491370344, guid: 9c83453d92212450dab9b504b02e4d83, type: 3}
+      - m_Target: {fileID: 620313305467286917}
         m_TargetAssemblyTypeName: MainGame.Scripts.UnitPanelManager, Assembly-CSharp
         m_MethodName: IncreaseSwatCount
         m_Mode: 1
@@ -7754,7 +7754,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 015c06a5e95ac4760b3a0ce220e69116, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7885,7 +7885,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8781732270491370344, guid: 9c83453d92212450dab9b504b02e4d83, type: 3}
+      - m_Target: {fileID: 620313305467286917}
         m_TargetAssemblyTypeName: MainGame.Scripts.UnitPanelManager, Assembly-CSharp
         m_MethodName: CheckBalanceIsEnough
         m_Mode: 2
@@ -7897,7 +7897,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3535898555835949933, guid: 8b33272acf55d4669b19afcec27677f8, type: 3}
+      - m_Target: {fileID: 4093778434922224347}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ShowMenuButton
         m_Mode: 1
@@ -8224,7 +8224,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8759095603365641119, guid: d705833ad62694fe0b513a5dd644bf1e, type: 3}
+      - m_Target: {fileID: 9116260841448449233}
         m_TargetAssemblyTypeName: BuildingManager, Assembly-CSharp
         m_MethodName: CheckBalanceIsEnough
         m_Mode: 2
@@ -8236,7 +8236,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3535898555835949933, guid: 8b33272acf55d4669b19afcec27677f8, type: 3}
+      - m_Target: {fileID: 4093778434922224347}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ShowMenuButton
         m_Mode: 1
@@ -8370,7 +8370,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8781732270491370344, guid: 9c83453d92212450dab9b504b02e4d83, type: 3}
+      - m_Target: {fileID: 620313305467286917}
         m_TargetAssemblyTypeName: MainGame.Scripts.UnitPanelManager, Assembly-CSharp
         m_MethodName: DecreaseWoodCutterCount
         m_Mode: 1
@@ -8722,7 +8722,7 @@ MonoBehaviour:
   castlePrefabB: {fileID: 1391843316543500301, guid: c81ef9f46ff214d73b7aabbfae5c734b, type: 3}
   lumbermillPrefabB: {fileID: 7699240499952530441, guid: 07049193330ad44a6bb0afde33cb94cd, type: 3}
   archeryardPrefabB: {fileID: 595388390487025735, guid: 19f52c66c78e24f15a634264d3779a51, type: 3}
-  user: {fileID: 5145591149427511658, guid: 9df780bbaf19242e290548d34dafb6a8, type: 3}
+  user: {fileID: 6810470420995237344}
   cameraParent: {fileID: 8828930975104236717}
 --- !u!114 &6726774772774388828
 MonoBehaviour:
