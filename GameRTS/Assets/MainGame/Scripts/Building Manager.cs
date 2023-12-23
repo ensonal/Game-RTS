@@ -24,22 +24,10 @@ public class BuildingManager : MonoBehaviour
 
     private GameObject selectedBuilding;
     private List<Building> buildings;
-    private int coroutineCountToStart = 0;
 
-    void Start()
-    {
-        Debug.Log((upgradePanel.name + " is found."));
-    }
+    
 
-    void Update()
-    {
-        if (coroutineCountToStart == 0)
-        {
-            StartCoroutine(WaitForStartGame());
-        }
-        //Debug.Log((upgradePanel.name + " is found."));
-
-    }
+    
 
     public void ShowUpgradePanel()
     {
@@ -139,9 +127,5 @@ public class BuildingManager : MonoBehaviour
         }
     }
 
-    private IEnumerator WaitForStartGame()
-    {
-        yield return new WaitForSeconds(2);
-        coroutineCountToStart++;
-    }
+   
 }

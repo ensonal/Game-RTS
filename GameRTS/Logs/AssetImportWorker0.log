@@ -15,7 +15,7 @@ C:/Users/Egemen/Documents/Lessons/Game/Game-RTS/GameRTS
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-62663
+62881
 Successfully changed project path to: C:/Users/Egemen/Documents/Lessons/Game/Game-RTS/GameRTS
 C:/Users/Egemen/Documents/Lessons/Game/Game-RTS/GameRTS
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/Users/Egemen/Documents/Lessons/Game/Game-RTS/GameRTS
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [20092] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 1939879414 [EditorId] 1939879414 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-KSNHK2I) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [1652] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 144052794 [EditorId] 144052794 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-KSNHK2I) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [20092] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 1939879414 [EditorId] 1939879414 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-KSNHK2I) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [1652] Host "[IP] 192.168.1.2 [Port] 0 [Flags] 2 [Guid] 144052794 [EditorId] 144052794 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-KSNHK2I) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 15.83 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 24.61 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.2.4f1 (8216e0211249)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.2.4f1/Editor/Data/Resources/UnitySubsystems
@@ -67,45 +67,45 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.2.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.2.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.2.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56416
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56288
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.2.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.2.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.2.4f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.019915 seconds.
-- Loaded All Assemblies, in  0.756 seconds
+Registered in 0.019799 seconds.
+- Loaded All Assemblies, in  1.068 seconds
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.614 seconds
+- Finished resetting the current domain, in  0.609 seconds
 Domain Reload Profiling:
-	ReloadAssembly (425ms)
-		BeginReloadAssembly (183ms)
+	ReloadAssembly (568ms)
+		BeginReloadAssembly (306ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (4ms)
+			CreateAndSetChildDomain (1ms)
 		LoadAllAssembliesAndSetupDomain (0ms)
-			LoadAssemblies (176ms)
+			LoadAssemblies (304ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (315ms)
-				TypeCache.Initialize (314ms)
-					TypeCache.ScanAssembly (309ms)
+			SetupTypeCache (485ms)
+				TypeCache.Initialize (484ms)
+					TypeCache.ScanAssembly (481ms)
 				ResolveRequiredComponents (1ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (460ms)
+			SetupLoadedEditorAssemblies (493ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (25ms)
-				SetLoadedEditorAssemblies (10ms)
+				InitializePlatformSupportModulesInManaged (19ms)
+				SetLoadedEditorAssemblies (8ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (3ms)
-				ProcessInitializeOnLoadAttributes (301ms)
-				ProcessInitializeOnLoadMethodAttributes (121ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (380ms)
+				ProcessInitializeOnLoadMethodAttributes (84ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -115,50 +115,50 @@ Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Egemen\Documents\Lessons\Game\Game-RTS\GameRTS\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\Egemen\Documents\Lessons\Game\Game-RTS\GameRTS\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  2.000 seconds
-Refreshing native plugins compatible for Editor in 7.51 ms, found 3 plugins.
+- Loaded All Assemblies, in  6.929 seconds
+Refreshing native plugins compatible for Editor in 9.26 ms, found 3 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.266 seconds
+- Finished resetting the current domain, in  1.420 seconds
 Domain Reload Profiling:
-	ReloadAssembly (432ms)
-		BeginReloadAssembly (246ms)
+	ReloadAssembly (393ms)
+		BeginReloadAssembly (215ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (12ms)
+			DisableScriptedObjects (10ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (46ms)
-		LoadAllAssembliesAndSetupDomain (1563ms)
-			LoadAssemblies (547ms)
+			CreateAndSetChildDomain (35ms)
+		LoadAllAssembliesAndSetupDomain (6533ms)
+			LoadAssemblies (531ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1117ms)
-				TypeCache.Initialize (640ms)
-					TypeCache.ScanAssembly (633ms)
-				ResolveRequiredComponents (54ms)
+			SetupTypeCache (6077ms)
+				TypeCache.Initialize (5571ms)
+					TypeCache.ScanAssembly (5564ms)
+				ResolveRequiredComponents (67ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (782ms)
+			SetupLoadedEditorAssemblies (997ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (18ms)
+				InitializePlatformSupportModulesInManaged (21ms)
 				SetLoadedEditorAssemblies (11ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (134ms)
-				ProcessInitializeOnLoadAttributes (561ms)
-				ProcessInitializeOnLoadMethodAttributes (48ms)
+				BeforeProcessingInitializeOnLoad (159ms)
+				ProcessInitializeOnLoadAttributes (730ms)
+				ProcessInitializeOnLoadMethodAttributes (66ms)
 				AfterProcessingInitializeOnLoad (10ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (19ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 10.52 ms, found 3 plugins.
+			AwakeInstancesAfterBackupRestoration (16ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 15.89 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3382 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 29 unused Assets / (71.0 KB). Loaded Objects now: 3857.
 Memory consumption went from 0.58 GB to 0.58 GB.
-Total: 7.571500 ms (FindLiveObjects: 0.557500 ms CreateObjectMapping: 0.737400 ms MarkObjects: 6.013700 ms  DeleteObjects: 0.261100 ms)
+Total: 5.355300 ms (FindLiveObjects: 0.521400 ms CreateObjectMapping: 0.616600 ms MarkObjects: 3.926000 ms  DeleteObjects: 0.289700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -174,444 +174,198 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 909272.992711 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 911346.266932 seconds.
+  path: Assets/MainGame
+  artifactKey: Guid(a6684b2ac271d344d91af1edcfc98da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36f5810a34c432b043a5190ced1ca554') in 0.246260 seconds 
-Number of asset objects unloaded after import = 1061
+Start importing Assets/MainGame using Guid(a6684b2ac271d344d91af1edcfc98da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53783e4e8d815adda474037530c8809b') in 0.002860 seconds 
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 47.441578 seconds.
+  Time since last request: 0.000068 seconds.
   path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
   artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b74799a14c5dfb752f7df35ef55ac6c6') in 0.121637 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 27.025881 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1dc84acd266fb0ee12a18639ef47e9f') in 0.288635 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 25.170059 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff51645b8c518ddb3b54226e83d1cf35') in 0.086055 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 10.905351 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fec76798ffa16c756e613da7148a4b7') in 0.080344 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 40.873244 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38d68418568bc052794a548bed8c4e69') in 0.086466 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 16.563959 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1170361ab50e88993f0f08a60649e648') in 0.086130 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 9.671262 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2907e9de9f66554ecbbb050b50fa321b') in 0.084983 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 7.821045 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c9a31113c4328bb7ae68d3a2a337899') in 0.081871 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 22.786481 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e34bd0a904adaf94afcef03cf84982b') in 0.081790 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 9.143433 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1262276829ae6fbd49efebd2ea9b3b22') in 0.086953 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 6.776521 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0366f8ee10b689ca800189f40920ba02') in 0.086038 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 9.328485 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a11bbe5fa677a591b510d0b6cc31f6a') in 0.088016 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 27.062018 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cc0fdc6dd8baebbed58e0d8d699ed1a') in 0.088643 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 9.830031 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9dedbe63a06f26ed83b2a26a7ffae92') in 0.082360 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 17.891463 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb51db1791b3b02953f9cf3fd0137f4d') in 0.083918 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 11.907776 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5060e71392882d6372b6d00b8d04dc99') in 0.084023 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 45.255906 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '983e1645dc721b7f7c05889d25322dd6') in 0.085430 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 6.548375 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e50048f9f725009213e7561627b584aa') in 0.080794 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 6.631700 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d1c4ae3cf05b33cf0d9fcd6242b1bbf') in 0.084975 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 7.977258 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70ad77abd5b59b6e11479a54d0de723c') in 0.081617 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 33.488733 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f200833b02d6675e5319ddecec4e3dc') in 0.082695 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 17.331094 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a51dabd15f159107863836ab13ad3bae') in 0.087296 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 23.641687 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '976b1bef1b019582b4665b989d5e80d9') in 0.081045 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 9.947641 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7b0305c97ec97a0d0c9d38e71920657') in 0.083587 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 13.286671 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '595842e91d5bf25dbea08a41f5ecc828') in 0.077522 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 10.034963 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8653cb92623ecbc786f1a304ad18251') in 0.076680 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 26.553573 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b60af33247223f10da31eaf4636f3564') in 0.080097 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 6.985528 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bbd483fb4de5af11cc6d9aff33e8aa0') in 0.083051 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 44.047471 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dbbc276065e5a87e0c0567f9f20c1a6') in 0.085354 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 14.989649 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb731cb015ce904f809683b2b8fdb619') in 0.085241 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 33.095090 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b90da77287656d8a6e07171e787041f8') in 0.087312 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 8.064758 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6ed271ffe13d7d634150e8dd7d8dd4b') in 0.082787 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 22.829076 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0002656851e6cf577441c5965a7fc4fa') in 0.081939 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 10.239565 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8524b4f55067d031ce16723bac36d0fc') in 0.076907 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 8.281289 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6daf9c020843996374c2f356f2015f44') in 0.082835 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 4.457271 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b95d376927fe87170d7bc7742341fe4') in 0.081659 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 13.740076 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b09c23a586220c0d430145204f9bc44') in 0.083656 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 5.535010 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6532b13644c813c91a347d12efc975a8') in 0.085603 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 7.073887 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41b58d716732844ec7c32023642b5bc8') in 0.080747 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 14.761014 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc806fbaced3408b895f9b4f3fe6db45') in 0.083041 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 70.351524 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8718663e80ed3c69752786881c7dc5b') in 0.080838 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 11.633131 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebeb57759fc23a83e8fbd1484b3c698f') in 0.082275 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 5.431523 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '197a91fd4e94706b894cc9dc703914df') in 0.078245 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 5.148116 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb289e36abe1a8727a93226f84bc4a13') in 0.086134 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 21.860416 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52681b1eb006e54d20401d94cd57a3cb') in 0.081976 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 25.155373 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7b5c253b59c5f670b1578b4f5167606') in 0.085205 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 12.892568 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d49b436c6d8063a094288af6bad8dc6') in 0.081612 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 8.192538 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bd5b09efb284de07ccec96a6edce72c') in 0.080696 seconds 
+Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '001f8395cbfbfe682d959de16737a5ad') in 0.376952 seconds 
 Number of asset objects unloaded after import = 1061
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Egemen\Documents\Lessons\Game\Game-RTS\GameRTS\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\Egemen\Documents\Lessons\Game\Game-RTS\GameRTS\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  1.434 seconds
-Refreshing native plugins compatible for Editor in 5.38 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.879 seconds
+Refreshing native plugins compatible for Editor in 12.53 ms, found 3 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.011 seconds
+- Finished resetting the current domain, in  3.690 seconds
 Domain Reload Profiling:
-	ReloadAssembly (309ms)
-		BeginReloadAssembly (195ms)
+	ReloadAssembly (317ms)
+		BeginReloadAssembly (201ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
+			DisableScriptedObjects (8ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (62ms)
-		LoadAllAssembliesAndSetupDomain (1121ms)
-			LoadAssemblies (416ms)
+			CreateAndSetChildDomain (63ms)
+		LoadAllAssembliesAndSetupDomain (1560ms)
+			LoadAssemblies (537ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (782ms)
-				TypeCache.Initialize (438ms)
-					TypeCache.ScanAssembly (430ms)
+			SetupTypeCache (1100ms)
+				TypeCache.Initialize (598ms)
+					TypeCache.ScanAssembly (586ms)
+				ResolveRequiredComponents (24ms)
+		FinalizeReload (0ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (0ms)
+			SetupLoadedEditorAssemblies (1035ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (27ms)
+				SetLoadedEditorAssemblies (14ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (221ms)
+				ProcessInitializeOnLoadAttributes (686ms)
+				ProcessInitializeOnLoadMethodAttributes (67ms)
+				AfterProcessingInitializeOnLoad (19ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (30ms)
+Refreshing native plugins compatible for Editor in 13.89 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3346 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (36.6 KB). Loaded Objects now: 3862.
+Memory consumption went from 0.58 GB to 0.58 GB.
+Total: 10.528100 ms (FindLiveObjects: 1.661700 ms CreateObjectMapping: 1.232900 ms MarkObjects: 7.556100 ms  DeleteObjects: 0.075600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1116.337575 seconds.
+  path: Assets/MainGame/Scripts/Building Manager.cs
+  artifactKey: Guid(c5369797191b1490b85144869a3172b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/MainGame/Scripts/Building Manager.cs using Guid(c5369797191b1490b85144869a3172b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79496c88dd4562ca71d8e3f0d11ff273') in 0.002499 seconds 
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Egemen\Documents\Lessons\Game\Game-RTS\GameRTS\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Egemen\Documents\Lessons\Game\Game-RTS\GameRTS\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.499 seconds
+Refreshing native plugins compatible for Editor in 7.20 ms, found 3 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.971 seconds
+Domain Reload Profiling:
+	ReloadAssembly (356ms)
+		BeginReloadAssembly (235ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (67ms)
+		LoadAllAssembliesAndSetupDomain (1139ms)
+			LoadAssemblies (424ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (805ms)
+				TypeCache.Initialize (456ms)
+					TypeCache.ScanAssembly (447ms)
+				ResolveRequiredComponents (14ms)
+		FinalizeReload (0ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (0ms)
+			SetupLoadedEditorAssemblies (844ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (19ms)
+				SetLoadedEditorAssemblies (12ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (158ms)
+				ProcessInitializeOnLoadAttributes (582ms)
+				ProcessInitializeOnLoadMethodAttributes (55ms)
+				AfterProcessingInitializeOnLoad (17ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (25ms)
+Refreshing native plugins compatible for Editor in 8.54 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3346 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (35.7 KB). Loaded Objects now: 3866.
+Memory consumption went from 0.58 GB to 0.58 GB.
+Total: 10.486500 ms (FindLiveObjects: 0.846600 ms CreateObjectMapping: 1.161800 ms MarkObjects: 8.408500 ms  DeleteObjects: 0.068100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Egemen\Documents\Lessons\Game\Game-RTS\GameRTS\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Egemen\Documents\Lessons\Game\Game-RTS\GameRTS\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.457 seconds
+Refreshing native plugins compatible for Editor in 5.14 ms, found 3 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.077 seconds
+Domain Reload Profiling:
+	ReloadAssembly (319ms)
+		BeginReloadAssembly (196ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (11ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (53ms)
+		LoadAllAssembliesAndSetupDomain (1134ms)
+			LoadAssemblies (404ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (810ms)
+				TypeCache.Initialize (453ms)
+					TypeCache.ScanAssembly (445ms)
 				ResolveRequiredComponents (13ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (922ms)
+			SetupLoadedEditorAssemblies (516ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (22ms)
-				SetLoadedEditorAssemblies (14ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (9ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (185ms)
-				ProcessInitializeOnLoadAttributes (617ms)
-				ProcessInitializeOnLoadMethodAttributes (65ms)
-				AfterProcessingInitializeOnLoad (18ms)
+				BeforeProcessingInitializeOnLoad (111ms)
+				ProcessInitializeOnLoadAttributes (348ms)
+				ProcessInitializeOnLoadMethodAttributes (28ms)
+				AfterProcessingInitializeOnLoad (9ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (24ms)
-Refreshing native plugins compatible for Editor in 13.28 ms, found 3 plugins.
+			AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 7.10 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3346 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 24 unused Assets / (36.5 KB). Loaded Objects now: 3862.
+Unloading 3347 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (43.1 KB). Loaded Objects now: 3870.
 Memory consumption went from 0.58 GB to 0.58 GB.
-Total: 5.458000 ms (FindLiveObjects: 0.329900 ms CreateObjectMapping: 0.357400 ms MarkObjects: 4.660800 ms  DeleteObjects: 0.108200 ms)
+Total: 7.306000 ms (FindLiveObjects: 0.360000 ms CreateObjectMapping: 0.341600 ms MarkObjects: 6.534600 ms  DeleteObjects: 0.068000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -626,109 +380,236 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Import Request.
-  Time since last request: 269.623723 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Camera Parent.prefab
-  artifactKey: Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Camera Parent.prefab using Guid(6aac72d7e41f98945961e0ad98fc990b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7629d6f57700b1b566cb0500b2a149e') in 0.178654 seconds 
-Number of asset objects unloaded after import = 1061
-========================================================================
-Received Import Request.
-  Time since last request: 4.735066 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Buildings
-  artifactKey: Guid(48f9a4a04cf574936b089d90b7ea9b32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Buildings using Guid(48f9a4a04cf574936b089d90b7ea9b32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3b703b228e77528afd8b5bfd1da71ea') in 0.002237 seconds 
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.039303 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Buildings/archeryard.png
-  artifactKey: Guid(015c06a5e95ac4760b3a0ce220e69116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Buildings/archeryard.png using Guid(015c06a5e95ac4760b3a0ce220e69116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26816bf40fecd9bfa9a413385a1d9a47') in 0.150332 seconds 
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Buildings/lumberhill.png
-  artifactKey: Guid(223faeffef0e24106a322a007021eaee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Buildings/lumberhill.png using Guid(223faeffef0e24106a322a007021eaee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d36e79756013a9915887f2d504e2085') in 0.029899 seconds 
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Buildings/denied-3d-render-icon-illustration-with-transparent-background-protection-and-security-png.png
-  artifactKey: Guid(cabb10f7a793243d39a20ba58ef4ebed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Buildings/denied-3d-render-icon-illustration-with-transparent-background-protection-and-security-png.png using Guid(cabb10f7a793243d39a20ba58ef4ebed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2559236a2104a261275f9562bfa5d636') in 0.033069 seconds 
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Buildings/lumbermill.fbx
-  artifactKey: Guid(56b0e0b1329c34364bc9da1796683533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Buildings/lumbermill.fbx using Guid(56b0e0b1329c34364bc9da1796683533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dc09de9266e833c4e62c04ee4e082e1') in 0.177108 seconds 
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/MainGame/Prefabs/Resources/Buildings/castle.png
-  artifactKey: Guid(e9bf7ab6fcbaf47cba3c66e31334106c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/MainGame/Prefabs/Resources/Buildings/castle.png using Guid(e9bf7ab6fcbaf47cba3c66e31334106c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf70fd69ff6e1d26869d0b88e7340267') in 0.028017 seconds 
-Number of asset objects unloaded after import = 3
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Egemen\Documents\Lessons\Game\Game-RTS\GameRTS\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Egemen\Documents\Lessons\Game\Game-RTS\GameRTS\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.509 seconds
+Refreshing native plugins compatible for Editor in 10.24 ms, found 3 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.871 seconds
+Domain Reload Profiling:
+	ReloadAssembly (338ms)
+		BeginReloadAssembly (203ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (62ms)
+		LoadAllAssembliesAndSetupDomain (1167ms)
+			LoadAssemblies (422ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (826ms)
+				TypeCache.Initialize (481ms)
+					TypeCache.ScanAssembly (470ms)
+				ResolveRequiredComponents (15ms)
+		FinalizeReload (0ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (0ms)
+			SetupLoadedEditorAssemblies (833ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (21ms)
+				SetLoadedEditorAssemblies (14ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (152ms)
+				ProcessInitializeOnLoadAttributes (567ms)
+				ProcessInitializeOnLoadMethodAttributes (60ms)
+				AfterProcessingInitializeOnLoad (19ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (28ms)
+Refreshing native plugins compatible for Editor in 13.24 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3347 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (43.1 KB). Loaded Objects now: 3874.
+Memory consumption went from 0.58 GB to 0.58 GB.
+Total: 7.432000 ms (FindLiveObjects: 0.500700 ms CreateObjectMapping: 1.043900 ms MarkObjects: 5.811600 ms  DeleteObjects: 0.073800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Egemen\Documents\Lessons\Game\Game-RTS\GameRTS\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\Egemen\Documents\Lessons\Game\Game-RTS\GameRTS\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  1.421 seconds
-Refreshing native plugins compatible for Editor in 8.71 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.410 seconds
+Refreshing native plugins compatible for Editor in 4.95 ms, found 3 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.119 seconds
+- Finished resetting the current domain, in  1.115 seconds
 Domain Reload Profiling:
-	ReloadAssembly (307ms)
-		BeginReloadAssembly (201ms)
+	ReloadAssembly (313ms)
+		BeginReloadAssembly (195ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
+			DisableScriptedObjects (11ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (71ms)
-		LoadAllAssembliesAndSetupDomain (1110ms)
-			LoadAssemblies (399ms)
+			CreateAndSetChildDomain (56ms)
+		LoadAllAssembliesAndSetupDomain (1094ms)
+			LoadAssemblies (415ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (786ms)
-				TypeCache.Initialize (431ms)
-					TypeCache.ScanAssembly (422ms)
-				ResolveRequiredComponents (18ms)
+			SetupTypeCache (753ms)
+				TypeCache.Initialize (425ms)
+					TypeCache.ScanAssembly (416ms)
+				ResolveRequiredComponents (12ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (927ms)
+			SetupLoadedEditorAssemblies (482ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (9ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (93ms)
+				ProcessInitializeOnLoadAttributes (318ms)
+				ProcessInitializeOnLoadMethodAttributes (40ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (18ms)
+Refreshing native plugins compatible for Editor in 5.95 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3347 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (43.0 KB). Loaded Objects now: 3878.
+Memory consumption went from 0.58 GB to 0.58 GB.
+Total: 5.007400 ms (FindLiveObjects: 0.426200 ms CreateObjectMapping: 0.349100 ms MarkObjects: 4.163800 ms  DeleteObjects: 0.066900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Egemen\Documents\Lessons\Game\Game-RTS\GameRTS\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Egemen\Documents\Lessons\Game\Game-RTS\GameRTS\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.425 seconds
+Refreshing native plugins compatible for Editor in 8.88 ms, found 3 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.881 seconds
+Domain Reload Profiling:
+	ReloadAssembly (321ms)
+		BeginReloadAssembly (201ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (55ms)
+		LoadAllAssembliesAndSetupDomain (1100ms)
+			LoadAssemblies (411ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (767ms)
+				TypeCache.Initialize (447ms)
+					TypeCache.ScanAssembly (439ms)
+				ResolveRequiredComponents (14ms)
+		FinalizeReload (0ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (0ms)
+			SetupLoadedEditorAssemblies (834ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (19ms)
 				SetLoadedEditorAssemblies (15ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (185ms)
-				ProcessInitializeOnLoadAttributes (627ms)
-				ProcessInitializeOnLoadMethodAttributes (60ms)
-				AfterProcessingInitializeOnLoad (20ms)
-				EditorAssembliesLoaded (1ms)
+				BeforeProcessingInitializeOnLoad (166ms)
+				ProcessInitializeOnLoadAttributes (542ms)
+				ProcessInitializeOnLoadMethodAttributes (71ms)
+				AfterProcessingInitializeOnLoad (21ms)
+				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (22ms)
-Refreshing native plugins compatible for Editor in 13.08 ms, found 3 plugins.
+			AwakeInstancesAfterBackupRestoration (31ms)
+Refreshing native plugins compatible for Editor in 13.03 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3346 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 24 unused Assets / (36.5 KB). Loaded Objects now: 3911.
+Unloading 3347 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (43.0 KB). Loaded Objects now: 3882.
 Memory consumption went from 0.58 GB to 0.58 GB.
-Total: 7.272700 ms (FindLiveObjects: 0.475200 ms CreateObjectMapping: 0.474300 ms MarkObjects: 6.239300 ms  DeleteObjects: 0.082100 ms)
+Total: 9.636300 ms (FindLiveObjects: 0.489200 ms CreateObjectMapping: 1.149900 ms MarkObjects: 7.910000 ms  DeleteObjects: 0.084900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Egemen\Documents\Lessons\Game\Game-RTS\GameRTS\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Egemen\Documents\Lessons\Game\Game-RTS\GameRTS\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.420 seconds
+Refreshing native plugins compatible for Editor in 6.60 ms, found 3 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.871 seconds
+Domain Reload Profiling:
+	ReloadAssembly (313ms)
+		BeginReloadAssembly (204ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (50ms)
+		LoadAllAssembliesAndSetupDomain (1103ms)
+			LoadAssemblies (407ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (780ms)
+				TypeCache.Initialize (466ms)
+					TypeCache.ScanAssembly (457ms)
+				ResolveRequiredComponents (10ms)
+		FinalizeReload (0ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (0ms)
+			SetupLoadedEditorAssemblies (862ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (20ms)
+				SetLoadedEditorAssemblies (13ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (166ms)
+				ProcessInitializeOnLoadAttributes (584ms)
+				ProcessInitializeOnLoadMethodAttributes (63ms)
+				AfterProcessingInitializeOnLoad (17ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (25ms)
+Refreshing native plugins compatible for Editor in 10.87 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3347 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (43.0 KB). Loaded Objects now: 3886.
+Memory consumption went from 0.58 GB to 0.58 GB.
+Total: 4.559900 ms (FindLiveObjects: 0.402600 ms CreateObjectMapping: 0.348200 ms MarkObjects: 3.356900 ms  DeleteObjects: 0.450500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 

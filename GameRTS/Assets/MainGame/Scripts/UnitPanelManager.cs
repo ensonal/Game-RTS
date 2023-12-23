@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
 using TMPro;
@@ -24,14 +25,13 @@ namespace MainGame.Scripts
         private List<Unit> units;
         private int buyAttemptCount = 0;
         private Vector3 addedPosition2 = new Vector3(0, 0, 1);
+        private int coroutineCountToStart = 0;
 
-        void Start()
-        {
-            createUnitPanel = GameObject.FindGameObjectWithTag("UnitPanel");
-        }
+
 
         void Update()
         {
+            
         }
 
         private void BuySelectedUnit(string prefabName)
@@ -215,4 +215,6 @@ namespace MainGame.Scripts
             }
         }
     }
+
+    
 }
