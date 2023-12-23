@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3580439777955174719, guid: 8d070d7636ed241459a31504c958cc93, type: 3}
+      propertyPath: _cameraParent
+      value: 
+      objectReference: {fileID: 5244002616276571593, guid: b378e055f60a5eb4c86cedd5a5964a25, type: 3}
     - target: {fileID: 4239375744490660898, guid: 8d070d7636ed241459a31504c958cc93, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -454,6 +458,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: archeryrangeA
       objectReference: {fileID: 0}
+    - target: {fileID: 3989362956065232417, guid: bee9006d1cb19f7489d4116c39c38b23, type: 3}
+      propertyPath: _cameraParent
+      value: 
+      objectReference: {fileID: 5244002616276571593, guid: b378e055f60a5eb4c86cedd5a5964a25, type: 3}
     - target: {fileID: 4034750913754491292, guid: bee9006d1cb19f7489d4116c39c38b23, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -642,6 +650,10 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 602186780382134729, guid: c81ef9f46ff214d73b7aabbfae5c734b, type: 3}
+      propertyPath: _cameraParent
+      value: 
+      objectReference: {fileID: 5244002616276571593, guid: b378e055f60a5eb4c86cedd5a5964a25, type: 3}
     - target: {fileID: 1391843316543500301, guid: c81ef9f46ff214d73b7aabbfae5c734b, type: 3}
       propertyPath: m_Name
       value: castleB
@@ -1338,7 +1350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afc58ba1fed744d30a3b7070f3b58416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraParent: {fileID: 9036618506159285700, guid: b378e055f60a5eb4c86cedd5a5964a25, type: 3}
+  cameraParent: {fileID: 8828930975104236717, guid: 6aac72d7e41f98945961e0ad98fc990b, type: 3}
   team1SpawnPoint: {x: 75.47, y: 19.99, z: 74.1}
   team2SpawnPoint: {x: 65.47, y: 19.99, z: 74.1}
 --- !u!4 &1266270157
@@ -1416,6 +1428,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6608883225891688302, guid: 19f52c66c78e24f15a634264d3779a51, type: 3}
+      propertyPath: _cameraParent
+      value: 
+      objectReference: {fileID: 5244002616276571593, guid: b378e055f60a5eb4c86cedd5a5964a25, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1849,12 +1865,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: castleA
       objectReference: {fileID: 0}
+    - target: {fileID: 4755786167530022445, guid: 6d7ad02f33138b349bc02ccea7dbfac5, type: 3}
+      propertyPath: _cameraParent
+      value: 
+      objectReference: {fileID: 5244002616276571593, guid: b378e055f60a5eb4c86cedd5a5964a25, type: 3}
     - target: {fileID: 7565676093901838501, guid: 6d7ad02f33138b349bc02ccea7dbfac5, type: 3}
       propertyPath: sceneViewId
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8858125327383702098, guid: 6d7ad02f33138b349bc02ccea7dbfac5, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d7ad02f33138b349bc02ccea7dbfac5, type: 3}

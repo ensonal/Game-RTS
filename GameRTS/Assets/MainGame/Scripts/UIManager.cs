@@ -57,7 +57,7 @@ public class UIManager : MonoBehaviour
     public void FillTopDisplay()
     {
         GameObject castle = GameObject.FindGameObjectWithTag("castleA");
-        Debug.Log(healthBar.gameObject.GetComponent<TextMeshProUGUI>().text);
+        //Debug.Log(healthBar.gameObject.GetComponent<TextMeshProUGUI>().text);
         
         healthBar.gameObject.GetComponent<TextMeshProUGUI>().text =
             castle.gameObject.GetComponent<Health>().health.ToString();

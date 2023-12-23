@@ -141,6 +141,7 @@ namespace MainGame.Scripts
 
         public void ShowUnitPanel()
         {
+            Debug.Log(createUnitPanel.name);
             createUnitPanel.SetActive(true);
             PopulateUnitPanel();
         }

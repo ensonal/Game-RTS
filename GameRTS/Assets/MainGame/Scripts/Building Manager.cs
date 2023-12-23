@@ -37,7 +37,7 @@ public class BuildingManager : MonoBehaviour
         {
             StartCoroutine(WaitForStartGame());
         }
-        Debug.Log((upgradePanel.name + " is found."));
+        //Debug.Log((upgradePanel.name + " is found."));
 
     }
 
