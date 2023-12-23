@@ -16,7 +16,7 @@ namespace MainGame.Scripts
         [SerializeField] private GameObject swatPrefabA;
         [SerializeField] private GameObject archerPrefabA;
         [SerializeField] private GameObject woodCutterPrefabA;
-        [SerializeField] private Sprite[] images;
+        [SerializeField] private Image[] images;
         [SerializeField] private GameObject user;
         [SerializeField] private TextMeshProUGUI swatCount;
         [SerializeField] private TextMeshProUGUI archerCount;
@@ -166,9 +166,9 @@ namespace MainGame.Scripts
             costTexts[1].text = archerPrefabA.GetComponent<Unit>().cost.ToString();
             costTexts[0].text = woodCutterPrefabA.GetComponent<Unit>().cost.ToString();
             
-            images[2] = swatPrefabA.GetComponent<Unit>().sprite;
-            images[1] = archerPrefabA.GetComponent<Unit>().sprite;
-            images[0] = woodCutterPrefabA.GetComponent<Unit>().sprite;
+            images[2].sprite = swatPrefabA.GetComponent<Unit>().sprite;
+            images[1].sprite = archerPrefabA.GetComponent<Unit>().sprite;
+            images[0].sprite = woodCutterPrefabA.GetComponent<Unit>().sprite;
         }
         
         public void IncreaseSwatCount()

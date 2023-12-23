@@ -11,7 +11,7 @@ public class BuildingManager : MonoBehaviour
     [SerializeField] private GameObject upgradePanel;
     [SerializeField] private TextMeshProUGUI[] nameTexts;
     [SerializeField] private TextMeshProUGUI[] costTexts;
-    [SerializeField] private Sprite[] images;
+    [SerializeField] private Image[] images;
     [SerializeField] private GameObject castlePrefabA;
     [SerializeField] private GameObject lumbermillPrefabA;
     [SerializeField] private GameObject archeryardPrefabA;
@@ -21,14 +21,18 @@ public class BuildingManager : MonoBehaviour
     [SerializeField] private GameObject user;
     [SerializeField] private GameObject cameraParent;
 
-
     private GameObject selectedBuilding;
     private List<Building> buildings;
-
     
+    void Start()
+    {
+        buildings = new List<Building>();
+        buildings.Add(lumbermillPrefabA.GetComponent<Building>());
+        buildings.Add(archeryardPrefabA.GetComponent<Building>());
+        buildings.Add(castlePrefabA.GetComponent<Building>());
 
+    }
     
-
     public void ShowUpgradePanel()
     {
         Debug.Log(upgradePanel.name + " is activated.");
@@ -44,13 +48,12 @@ public class BuildingManager : MonoBehaviour
     private void PopulateUpgradePanel()
     {
         Debug.Log("PopulateUpgradePanel method is called.");
-        buildings = new List<Building>(Resources.LoadAll<Building>("Buildings"));
 
         for (int i = 0; i < Mathf.Min(buildings.Count, nameTexts.Length); i++)
         {
             nameTexts[i].text = buildings[i].name;
             costTexts[i].text = buildings[i].cost.ToString();
-            images[i] = buildings[i].sprite;
+            images[i].sprite = buildings[i].sprite;
         }
     }
 

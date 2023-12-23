@@ -57,9 +57,9 @@ MonoBehaviour:
   archerPrefabA: {fileID: 368099557311259074, guid: 8929463659a8e48d0a397317c94b37a1, type: 3}
   woodCutterPrefabA: {fileID: 6178452128728839148, guid: b11cf28d99b0c4ca6b5eaa08e7d36b0c, type: 3}
   images:
-  - {fileID: 21300000, guid: 10a146c1ba512415e9eaf7fb61b8abd9, type: 3}
-  - {fileID: 21300000, guid: ab3d6e4bb1139436496fcb0ff8a82ab9, type: 3}
-  - {fileID: 21300000, guid: 8f4b324d8064041159651cd05df0adeb, type: 3}
+  - {fileID: 5358194180024449463}
+  - {fileID: 5358194179477988997}
+  - {fileID: 5358194178991326258}
   user: {fileID: 6810470420995237344}
   swatCount: {fileID: 5358194180326032564}
   archerCount: {fileID: 5358194180112621662}
@@ -1216,7 +1216,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 223faeffef0e24106a322a007021eaee, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2903,7 +2903,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e9bf7ab6fcbaf47cba3c66e31334106c, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7754,7 +7754,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 015c06a5e95ac4760b3a0ce220e69116, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8713,9 +8713,9 @@ MonoBehaviour:
   - {fileID: 5358194180132269049}
   - {fileID: 5358194180101608018}
   images:
-  - {fileID: 21300000, guid: 223faeffef0e24106a322a007021eaee, type: 3}
-  - {fileID: 21300000, guid: 015c06a5e95ac4760b3a0ce220e69116, type: 3}
-  - {fileID: 21300000, guid: e9bf7ab6fcbaf47cba3c66e31334106c, type: 3}
+  - {fileID: 5358194180886294350}
+  - {fileID: 5358194179785032120}
+  - {fileID: 5358194179133860052}
   castlePrefabA: {fileID: 2149138306500054904, guid: 6d7ad02f33138b349bc02ccea7dbfac5, type: 3}
   lumbermillPrefabA: {fileID: 5491560384211002521, guid: 8d070d7636ed241459a31504c958cc93, type: 3}
   archeryardPrefabA: {fileID: 957562588133377799, guid: bee9006d1cb19f7489d4116c39c38b23, type: 3}

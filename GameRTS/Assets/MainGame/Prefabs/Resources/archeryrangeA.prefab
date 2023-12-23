@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a11d11c82bbce4dcfa8fb4e173d1c4d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 100
+  cost: 200
   name: Archer Range
   sprite: {fileID: 21300000, guid: 015c06a5e95ac4760b3a0ce220e69116, type: 3}
 --- !u!64 &429132684208750825
