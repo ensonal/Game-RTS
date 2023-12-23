@@ -7,10 +7,10 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     [SerializeField] private Image _healthbarSprite;
-    //[SerializeField] private GameObject _cameraParent;
+    [SerializeField] private GameObject _cameraParent;
 
     private Camera camera;
-    // Start is called before the first frame update
+    //Start is called before the first frame update
 
     private void Start()
     {

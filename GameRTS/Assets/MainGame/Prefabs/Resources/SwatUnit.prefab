@@ -2299,8 +2299,6 @@ GameObject:
   - component: {fileID: 385319643328490171}
   - component: {fileID: -2236326203717554037}
   - component: {fileID: -7301822524965075789}
-  - component: {fileID: 8413462045817095209}
-  - component: {fileID: -2568948307811679598}
   - component: {fileID: 2558744351849899647}
   m_Layer: 8
   m_Name: SwatUnit
@@ -2514,7 +2512,6 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: -7301822524965075789}
-  - {fileID: -2568948307811679598}
   - {fileID: 2558744351849899647}
   sceneViewId: 0
   InstantiationId: 0
@@ -2545,49 +2542,6 @@ MonoBehaviour:
     LayerIndex: 0
   - SynchronizeType: 0
     LayerIndex: 1
---- !u!54 &8413462045817095209
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7847743409156819737}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &-2568948307811679598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7847743409156819737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!114 &2558744351849899647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3132,7 +3086,7 @@ PrefabInstance:
     - target: {fileID: 5947298644050820073, guid: c35bde4fc9e7e4aad95635022629af32, type: 3}
       propertyPath: _cameraParent
       value: 
-      objectReference: {fileID: 9036618506159285700, guid: b378e055f60a5eb4c86cedd5a5964a25, type: 3}
+      objectReference: {fileID: 8828930975104236717, guid: 6aac72d7e41f98945961e0ad98fc990b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

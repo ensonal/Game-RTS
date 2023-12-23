@@ -1,19 +1,25 @@
 ﻿using Photon.Pun;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviourPunCallbacks
 {
+    
     // Update is called once per frame
     void Update()
     {
-        if (InteractWithCombat() == true)
+        if(photonView.IsMine)
         {
-            return;
+            if (InteractWithCombat() == true)
+            {
+                return;
+            }
+            if (InteractWithMovement() == true)
+            {
+                return;
+            }
         }
-        if (InteractWithMovement() == true)
-        {
-            return;
-        }
+
+        
     }
     private bool InteractWithCombat()
     {

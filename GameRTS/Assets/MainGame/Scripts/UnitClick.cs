@@ -23,35 +23,40 @@ public class UnitClick : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if(photonView.IsMine)
         {
-            RaycastHit hit;
-            Ray ray = myCam.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, clickable))
+            if (Input.GetMouseButtonDown(1))
             {
-                Debug.Log("Clicked on " + hit.collider.gameObject.name);
-                if (Input.GetKey(KeyCode.LeftShift))
+                RaycastHit hit;
+                Ray ray = myCam.ScreenPointToRay(Input.mousePosition);
+
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity, clickable))
                 {
-                    Debug.Log("Shift click selected çalıştı");
-                    ShiftClickSelect(hit.collider.gameObject);
+                    Debug.Log("Clicked on " + hit.collider.gameObject.name);
+                    if (Input.GetKey(KeyCode.LeftShift))
+                    {
+                        Debug.Log("Shift click selected çalıştı");
+                        ShiftClickSelect(hit.collider.gameObject);
+                    }
+                    else
+                    {
+                        Debug.Log("Click selected çalıştı");
+                        ClickSelect(hit.collider.gameObject);
+                        Debug.Log(hit.collider.gameObject.name);
+                    }
                 }
                 else
                 {
-                    Debug.Log("Click selected çalıştı");
-                    ClickSelect(hit.collider.gameObject);
-                    Debug.Log(hit.collider.gameObject.name);
+                    if (!Input.GetKey(KeyCode.LeftShift))
+                    {
+                        DeselectAll();
+                        Debug.Log("Deselecting all");
+                    }
                 }
             }
-            else
-            {
-                if (!Input.GetKey(KeyCode.LeftShift))
-                {
-                    DeselectAll();
-                    Debug.Log("Deselecting all");
-                }
-            }
+
         }
+       
     }
     
     public void ShiftClickSelect(GameObject unitToAdd)

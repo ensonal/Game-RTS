@@ -3,20 +3,25 @@ using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
 
-public class WoodCutterController : MonoBehaviour
+public class WoodCutterController : MonoBehaviourPunCallbacks
 {
     // Update is called once per frame
     void Update()
     {
-        if (InteractWithCombat() == true)
+        if (photonView.IsMine)
         {
-            return;
+            if (InteractWithCombat() == true)
+            {
+                return;
+            }
+            if (InteractWithMovement() == true)
+            {
+                return;
+            }
+            //Debug.Log("Nothing");
+
         }
-        if (InteractWithMovement() == true)
-        {
-            return;
-        }
-        //Debug.Log("Nothing");
+
     }
     private bool InteractWithCombat()
     {

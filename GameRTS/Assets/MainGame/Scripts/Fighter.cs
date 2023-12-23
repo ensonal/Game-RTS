@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
 
-public class Fighter : MonoBehaviour, IAction
+public class Fighter : MonoBehaviourPunCallbacks, IAction
 {
     [SerializeField] float timeBetweenAttacks = 1f;
     [SerializeField] float weaponRange = 2.0f;
@@ -41,9 +41,13 @@ public class Fighter : MonoBehaviour, IAction
     
     void Hit()
     {
-        Debug.Log(targetObject.name + "hit");
-        Health health = targetObject.GetComponent<Health>();
-        health.gameObject.GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.All, weaponDamage);
+        if (photonView.IsMine)
+        {
+            Debug.Log(targetObject.name + "hit");
+            Health health = targetObject.GetComponent<Health>();
+            health.gameObject.GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.All, weaponDamage);
+        }
+       
     }
 
     [PunRPC]
