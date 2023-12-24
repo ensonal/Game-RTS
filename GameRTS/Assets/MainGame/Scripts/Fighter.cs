@@ -12,6 +12,7 @@ public class Fighter : MonoBehaviourPunCallbacks, IAction
 
     Transform targetObject;
     float timeSinceLastAttack;
+    
     private void Start()
     {
         weaponRange = 2.0f;
@@ -63,9 +64,20 @@ public class Fighter : MonoBehaviourPunCallbacks, IAction
     
     public void Attack(CombatTarget target)
    {
-        GetComponent<ActionScheduler>().StartAction(this);
-        targetObject = target.transform;
-        Debug.Log("Attack is done");
+       if (PhotonNetwork.LocalPlayer.ActorNumber == 1 && target.gameObject.CompareTag("TeamB"))
+       {
+           GetComponent<ActionScheduler>().StartAction(this);
+           targetObject = target.transform;
+           Debug.Log("Attack is done");
+       }
+
+       if (PhotonNetwork.LocalPlayer.ActorNumber == 2 && target.gameObject.CompareTag("TeamA"))
+       {
+           GetComponent<ActionScheduler>().StartAction(this);
+           targetObject = target.transform;
+           Debug.Log("Attack is done");
+       }
+
     }
     
     public void Cancel()

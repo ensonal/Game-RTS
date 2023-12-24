@@ -60,12 +60,12 @@ public class UIManager : MonoBehaviourPunCallbacks
         int playerID = PhotonNetwork.LocalPlayer.ActorNumber;
         if (playerID == 1)
         {
-             castle = GameObject.FindGameObjectWithTag("castleA");
+            castle = GameObject.Find("castleA");
         }
         
         if (playerID == 2)
         {
-             castle = GameObject.FindGameObjectWithTag("castleB");
+             castle = GameObject.Find("castleB");
         }
 
         //Debug.Log(healthBar.gameObject.GetComponent<TextMeshProUGUI>().text);

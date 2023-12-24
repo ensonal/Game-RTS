@@ -10,11 +10,32 @@ public class Health : MonoBehaviourPunCallbacks
     [SerializeField] public float health;
     public HealthBar healthBar;
     private float maxHealth;
+    private GameObject user;
 
     private void Start()
     {
         maxHealth = health;
         healthBar = GetComponentInChildren<HealthBar>();
+        SetUser();
+    }
+
+    void SetUser()
+    {
+        int playerId = PhotonNetwork.LocalPlayer.ActorNumber;
+        
+        if (playerId == 1)
+        {
+            Debug.Log("Player 1");
+            user = GameObject.FindGameObjectWithTag("TeamA");
+            Debug.Log(user);
+        }
+
+        if (playerId == 2)
+        {
+            Debug.Log("Player 2");
+            user = GameObject.FindGameObjectWithTag("TeamB");
+            Debug.Log(user);
+        }
     }
 
     private void Update()
@@ -22,6 +43,7 @@ public class Health : MonoBehaviourPunCallbacks
         if (health <= 0)
         {
             PhotonNetwork.Destroy(gameObject);
+            user.GetComponent<User>().coin += 100;
         }
 
         healthBar.UpdateHealthBar(maxHealth, health);

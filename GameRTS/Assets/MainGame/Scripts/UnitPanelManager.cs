@@ -37,11 +37,29 @@ namespace MainGame.Scripts
         void Start()
         {
             SetSpawnPosition();
+            SetTeam();
         }
 
         void Update()
         {
             
+        }
+
+        void SetTeam()
+        {
+            if (PhotonNetwork.LocalPlayer.ActorNumber == 1)
+            {
+                swatPrefab.tag = "TeamA";
+                archerPrefab.tag = "TeamA";
+                woodCutterPrefab.tag = "TeamA";
+            }
+            
+            if(PhotonNetwork.LocalPlayer.ActorNumber == 2)
+            {
+                swatPrefab.tag = "TeamB";
+                archerPrefab.tag = "TeamB";
+                woodCutterPrefab.tag = "TeamB";
+            }
         }
 
         void SetSpawnPosition()

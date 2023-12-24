@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using Photon.Pun;
 using UnityEngine;
 
@@ -23,11 +24,13 @@ public class RTSGameManager : MonoBehaviour
             if (PhotonNetwork.LocalPlayer.ActorNumber == 1)
             {
                 PhotonNetwork.Instantiate(cameraParent.name, team1SpawnPoint, Quaternion.identity);
+                cameraParent.transform.GetChild(4).gameObject.tag = "TeamA";
             }
             
             if(PhotonNetwork.LocalPlayer.ActorNumber == 2)
             {
                 PhotonNetwork.Instantiate(cameraParent.name, team2SpawnPoint, Quaternion.identity);
+                cameraParent.transform.GetChild(4).gameObject.tag = "TeamB";
             }
         }
         else
