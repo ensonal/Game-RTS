@@ -17,6 +17,8 @@ TagManager:
   - BuildingPanel
   - TeamA
   - TeamB
+  - UserA
+  - UserB
   layers:
   - Default
   - TransparentFX

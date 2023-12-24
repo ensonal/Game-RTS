@@ -24,13 +24,13 @@ public class RTSGameManager : MonoBehaviour
             if (PhotonNetwork.LocalPlayer.ActorNumber == 1)
             {
                 PhotonNetwork.Instantiate(cameraParent.name, team1SpawnPoint, Quaternion.identity);
-                cameraParent.transform.GetChild(4).gameObject.tag = "TeamA";
+                cameraParent.transform.GetChild(4).gameObject.tag = "UserA";
             }
             
             if(PhotonNetwork.LocalPlayer.ActorNumber == 2)
             {
                 PhotonNetwork.Instantiate(cameraParent.name, team2SpawnPoint, Quaternion.identity);
-                cameraParent.transform.GetChild(4).gameObject.tag = "TeamB";
+                cameraParent.transform.GetChild(4).gameObject.tag = "UserB";
             }
         }
         else

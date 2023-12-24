@@ -26,14 +26,14 @@ public class Health : MonoBehaviourPunCallbacks
         if (playerId == 1)
         {
             Debug.Log("Player 1");
-            user = GameObject.FindGameObjectWithTag("TeamA");
+            user = GameObject.FindGameObjectWithTag("UserA");
             Debug.Log(user);
         }
 
         if (playerId == 2)
         {
             Debug.Log("Player 2");
-            user = GameObject.FindGameObjectWithTag("TeamB");
+            user = GameObject.FindGameObjectWithTag("UserB");
             Debug.Log(user);
         }
     }
