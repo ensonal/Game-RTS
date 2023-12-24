@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIManager : MonoBehaviour
+public class UIManager : MonoBehaviourPunCallbacks
 {
     [SerializeField] private GameObject menuButton;
     [SerializeField] private GameObject unitButton;
@@ -56,7 +56,18 @@ public class UIManager : MonoBehaviour
     
     public void FillTopDisplay()
     {
-        GameObject castle = GameObject.FindGameObjectWithTag("castleA");
+        GameObject castle = null;
+        int playerID = PhotonNetwork.LocalPlayer.ActorNumber;
+        if (playerID == 1)
+        {
+             castle = GameObject.FindGameObjectWithTag("castleA");
+        }
+        
+        if (playerID == 2)
+        {
+             castle = GameObject.FindGameObjectWithTag("castleB");
+        }
+
         //Debug.Log(healthBar.gameObject.GetComponent<TextMeshProUGUI>().text);
         
         healthBar.gameObject.GetComponent<TextMeshProUGUI>().text =

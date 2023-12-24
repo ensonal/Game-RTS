@@ -3,17 +3,22 @@ ScriptsOnlyBuild:
     Assembly-CSharp:
     - ActionScheduler
     - Building
+    - BuildingManager
     - CombatTarget
     - Cutter
     - Fighter
+    - GraphicSelection
     - Health
     - HealthBar
+    - MainGame.Scripts.UnitPanelManager
     - Mover
     - MoverWoodCutter
     - PlayerController
     - RTSCameraController
+    - UIManager
     - Unit
     - UnitClick
+    - User
     - WoodCutterController
     Assembly-CSharp.dll:
     - ActionScheduler
@@ -72,6 +77,7 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
@@ -81,17 +87,21 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI:
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.RawImage
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
@@ -184,22 +194,25 @@ ScriptsOnlyBuild:
     methodName: OnBackButtonClicked
   - assembly: Assembly-CSharp
     fullTypeName: MainGame.Scripts.UnitPanelManager
-    methodName: DecreaseWoodCutterCount
-  - assembly: Assembly-CSharp
-    fullTypeName: MainGame.Scripts.UnitPanelManager
-    methodName: IncreaseSwatCount
-  - assembly: Assembly-CSharp
-    fullTypeName: MainGame.Scripts.UnitPanelManager
-    methodName: CheckBalanceIsEnough
+    methodName: ShowUnitPanel
   - assembly: Assembly-CSharp
     fullTypeName: UIManager
-    methodName: ShowMenuButton
+    methodName: HideMenuButton
   - assembly: Assembly-CSharp
     fullTypeName: BuildingManager
-    methodName: CheckBalanceIsEnough
+    methodName: ShowUpgradePanel
+  - assembly: Assembly-CSharp
+    fullTypeName: UIManager
+    methodName: HideMenuButton
   - assembly: Assembly-CSharp
     fullTypeName: UIManager
     methodName: ShowMenuButton
+  - assembly: Assembly-CSharp
+    fullTypeName: UIManager
+    methodName: ShowMenuOptions
+  - assembly: Assembly-CSharp
+    fullTypeName: MainGame.Scripts.UnitPanelManager
+    methodName: HideUnitPanel
   - assembly: Assembly-CSharp
     fullTypeName: UIManager
     methodName: ShowMenuButton
@@ -210,6 +223,18 @@ ScriptsOnlyBuild:
     fullTypeName: UIManager
     methodName: ShowMenuButton
   - assembly: Assembly-CSharp
+    fullTypeName: MainGame.Scripts.UnitPanelManager
+    methodName: CheckBalanceIsEnough
+  - assembly: Assembly-CSharp
+    fullTypeName: UIManager
+    methodName: ShowMenuButton
+  - assembly: Assembly-CSharp
+    fullTypeName: MainGame.Scripts.UnitPanelManager
+    methodName: CheckBalanceIsEnough
+  - assembly: Assembly-CSharp
+    fullTypeName: UIManager
+    methodName: ShowMenuButton
+  - assembly: Assembly-CSharp
     fullTypeName: BuildingManager
     methodName: CheckBalanceIsEnough
   - assembly: Assembly-CSharp
@@ -218,6 +243,51 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: BuildingManager
     methodName: CheckBalanceIsEnough
+  - assembly: Assembly-CSharp
+    fullTypeName: UIManager
+    methodName: ShowMenuButton
+  - assembly: Assembly-CSharp
+    fullTypeName: MainGame.Scripts.UnitPanelManager
+    methodName: CheckBalanceIsEnough
+  - assembly: Assembly-CSharp
+    fullTypeName: UIManager
+    methodName: ShowMenuButton
+  - assembly: Assembly-CSharp
+    fullTypeName: BuildingManager
+    methodName: CheckBalanceIsEnough
+  - assembly: Assembly-CSharp
+    fullTypeName: UIManager
+    methodName: ShowMenuButton
+  - assembly: Assembly-CSharp
+    fullTypeName: MainGame.Scripts.UnitPanelManager
+    methodName: IncreaseWoodCutterCount
+  - assembly: Assembly-CSharp
+    fullTypeName: MainGame.Scripts.UnitPanelManager
+    methodName: IncreaseArcherCount
+  - assembly: Assembly-CSharp
+    fullTypeName: MainGame.Scripts.UnitPanelManager
+    methodName: DecreaseArcherCount
+  - assembly: Assembly-CSharp
+    fullTypeName: MainGame.Scripts.UnitPanelManager
+    methodName: DecreaseSwatCount
+  - assembly: Assembly-CSharp
+    fullTypeName: MainGame.Scripts.UnitPanelManager
+    methodName: IncreaseSwatCount
+  - assembly: Assembly-CSharp
+    fullTypeName: MainGame.Scripts.UnitPanelManager
+    methodName: DecreaseWoodCutterCount
+  - assembly: Assembly-CSharp
+    fullTypeName: MainGame.Scripts.UnitPanelManager
+    methodName: ShowUnitPanel
+  - assembly: Assembly-CSharp
+    fullTypeName: UIManager
+    methodName: HideMenuButton
+  - assembly: Assembly-CSharp
+    fullTypeName: BuildingManager
+    methodName: ShowUpgradePanel
+  - assembly: Assembly-CSharp
+    fullTypeName: UIManager
+    methodName: HideMenuButton
   - assembly: Assembly-CSharp
     fullTypeName: UIManager
     methodName: ShowMenuButton
@@ -226,31 +296,16 @@ ScriptsOnlyBuild:
     methodName: ShowMenuOptions
   - assembly: Assembly-CSharp
     fullTypeName: MainGame.Scripts.UnitPanelManager
-    methodName: CheckBalanceIsEnough
-  - assembly: Assembly-CSharp
-    fullTypeName: UIManager
-    methodName: ShowMenuButton
-  - assembly: Assembly-CSharp
-    fullTypeName: MainGame.Scripts.UnitPanelManager
     methodName: HideUnitPanel
   - assembly: Assembly-CSharp
     fullTypeName: UIManager
     methodName: ShowMenuButton
   - assembly: Assembly-CSharp
-    fullTypeName: MainGame.Scripts.UnitPanelManager
-    methodName: DecreaseSwatCount
-  - assembly: Assembly-CSharp
     fullTypeName: BuildingManager
-    methodName: ShowUpgradePanel
+    methodName: HideUpgradePanel
   - assembly: Assembly-CSharp
     fullTypeName: UIManager
-    methodName: HideMenuButton
-  - assembly: Assembly-CSharp
-    fullTypeName: MainGame.Scripts.UnitPanelManager
-    methodName: DecreaseArcherCount
-  - assembly: Assembly-CSharp
-    fullTypeName: MainGame.Scripts.UnitPanelManager
-    methodName: IncreaseArcherCount
+    methodName: ShowMenuButton
   - assembly: Assembly-CSharp
     fullTypeName: MainGame.Scripts.UnitPanelManager
     methodName: CheckBalanceIsEnough
@@ -259,13 +314,52 @@ ScriptsOnlyBuild:
     methodName: ShowMenuButton
   - assembly: Assembly-CSharp
     fullTypeName: MainGame.Scripts.UnitPanelManager
-    methodName: ShowUnitPanel
+    methodName: CheckBalanceIsEnough
   - assembly: Assembly-CSharp
     fullTypeName: UIManager
-    methodName: HideMenuButton
+    methodName: ShowMenuButton
+  - assembly: Assembly-CSharp
+    fullTypeName: BuildingManager
+    methodName: CheckBalanceIsEnough
+  - assembly: Assembly-CSharp
+    fullTypeName: UIManager
+    methodName: ShowMenuButton
+  - assembly: Assembly-CSharp
+    fullTypeName: BuildingManager
+    methodName: CheckBalanceIsEnough
+  - assembly: Assembly-CSharp
+    fullTypeName: UIManager
+    methodName: ShowMenuButton
+  - assembly: Assembly-CSharp
+    fullTypeName: MainGame.Scripts.UnitPanelManager
+    methodName: CheckBalanceIsEnough
+  - assembly: Assembly-CSharp
+    fullTypeName: UIManager
+    methodName: ShowMenuButton
+  - assembly: Assembly-CSharp
+    fullTypeName: BuildingManager
+    methodName: CheckBalanceIsEnough
+  - assembly: Assembly-CSharp
+    fullTypeName: UIManager
+    methodName: ShowMenuButton
   - assembly: Assembly-CSharp
     fullTypeName: MainGame.Scripts.UnitPanelManager
     methodName: IncreaseWoodCutterCount
+  - assembly: Assembly-CSharp
+    fullTypeName: MainGame.Scripts.UnitPanelManager
+    methodName: IncreaseArcherCount
+  - assembly: Assembly-CSharp
+    fullTypeName: MainGame.Scripts.UnitPanelManager
+    methodName: DecreaseArcherCount
+  - assembly: Assembly-CSharp
+    fullTypeName: MainGame.Scripts.UnitPanelManager
+    methodName: DecreaseSwatCount
+  - assembly: Assembly-CSharp
+    fullTypeName: MainGame.Scripts.UnitPanelManager
+    methodName: IncreaseSwatCount
+  - assembly: Assembly-CSharp
+    fullTypeName: MainGame.Scripts.UnitPanelManager
+    methodName: DecreaseWoodCutterCount
   sceneClasses:
     Assets/MainGame/Scenes/Environment_Free.unity:
     - Class: 1
@@ -309,75 +403,75 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1638}
+      Script: {instanceID: 1642}
     - Class: 114
-      Script: {instanceID: 2354}
+      Script: {instanceID: 2358}
     - Class: 114
-      Script: {instanceID: 2640}
+      Script: {instanceID: 2644}
     - Class: 114
-      Script: {instanceID: 2844}
+      Script: {instanceID: 2848}
     - Class: 114
-      Script: {instanceID: 3120}
+      Script: {instanceID: 3124}
     - Class: 114
-      Script: {instanceID: 5062}
+      Script: {instanceID: 5064}
     - Class: 114
-      Script: {instanceID: 5626}
+      Script: {instanceID: 5628}
     - Class: 114
-      Script: {instanceID: 5770}
+      Script: {instanceID: 5772}
     - Class: 114
-      Script: {instanceID: 6086}
+      Script: {instanceID: 6088}
     - Class: 114
-      Script: {instanceID: 8836}
+      Script: {instanceID: 8886}
     - Class: 114
-      Script: {instanceID: 8844}
+      Script: {instanceID: 8894}
     - Class: 114
-      Script: {instanceID: 8900}
+      Script: {instanceID: 8950}
     - Class: 114
-      Script: {instanceID: 8904}
+      Script: {instanceID: 8954}
     - Class: 114
-      Script: {instanceID: 8908}
+      Script: {instanceID: 8958}
     - Class: 114
-      Script: {instanceID: 8912}
+      Script: {instanceID: 8962}
     - Class: 114
-      Script: {instanceID: 8928}
+      Script: {instanceID: 8982}
     - Class: 114
-      Script: {instanceID: 8940}
+      Script: {instanceID: 8994}
     - Class: 114
-      Script: {instanceID: 8948}
+      Script: {instanceID: 9002}
     - Class: 114
-      Script: {instanceID: 8992}
+      Script: {instanceID: 9046}
     - Class: 114
-      Script: {instanceID: 9028}
+      Script: {instanceID: 9082}
     - Class: 114
-      Script: {instanceID: 9076}
+      Script: {instanceID: 9122}
     - Class: 114
-      Script: {instanceID: 9084}
+      Script: {instanceID: 9130}
     - Class: 114
-      Script: {instanceID: 9164}
+      Script: {instanceID: 9210}
     - Class: 114
-      Script: {instanceID: 9208}
+      Script: {instanceID: 9254}
     - Class: 114
-      Script: {instanceID: 9396}
+      Script: {instanceID: 9438}
     - Class: 114
-      Script: {instanceID: 9400}
+      Script: {instanceID: 9442}
     - Class: 114
-      Script: {instanceID: 9468}
+      Script: {instanceID: 9510}
     - Class: 114
-      Script: {instanceID: 9500}
+      Script: {instanceID: 9542}
     - Class: 114
-      Script: {instanceID: 9528}
+      Script: {instanceID: 9570}
     - Class: 114
-      Script: {instanceID: 9612}
+      Script: {instanceID: 9654}
     - Class: 114
-      Script: {instanceID: 9680}
+      Script: {instanceID: 9722}
     - Class: 114
-      Script: {instanceID: 9684}
+      Script: {instanceID: 9726}
     - Class: 114
-      Script: {instanceID: 9724}
+      Script: {instanceID: 9766}
     - Class: 114
-      Script: {instanceID: 9732}
+      Script: {instanceID: 9774}
     - Class: 114
-      Script: {instanceID: 9736}
+      Script: {instanceID: 9778}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -456,111 +550,125 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1638}
+      Script: {instanceID: 1642}
     - Class: 114
-      Script: {instanceID: 1764}
+      Script: {instanceID: 1768}
     - Class: 114
-      Script: {instanceID: 1830}
+      Script: {instanceID: 1834}
     - Class: 114
-      Script: {instanceID: 2228}
+      Script: {instanceID: 2232}
     - Class: 114
-      Script: {instanceID: 2640}
+      Script: {instanceID: 2358}
     - Class: 114
-      Script: {instanceID: 2844}
+      Script: {instanceID: 2644}
     - Class: 114
-      Script: {instanceID: 2884}
+      Script: {instanceID: 2848}
     - Class: 114
-      Script: {instanceID: 3120}
+      Script: {instanceID: 2888}
     - Class: 114
-      Script: {instanceID: 3886}
+      Script: {instanceID: 3124}
     - Class: 114
-      Script: {instanceID: 4118}
+      Script: {instanceID: 3890}
     - Class: 114
-      Script: {instanceID: 4366}
+      Script: {instanceID: 4122}
     - Class: 114
-      Script: {instanceID: 4740}
+      Script: {instanceID: 4370}
     - Class: 114
-      Script: {instanceID: 4990}
+      Script: {instanceID: 4744}
     - Class: 114
-      Script: {instanceID: 4998}
+      Script: {instanceID: 4992}
     - Class: 114
-      Script: {instanceID: 5062}
+      Script: {instanceID: 5000}
     - Class: 114
-      Script: {instanceID: 5326}
+      Script: {instanceID: 5064}
     - Class: 114
-      Script: {instanceID: 5626}
+      Script: {instanceID: 5328}
     - Class: 114
-      Script: {instanceID: 6086}
+      Script: {instanceID: 5628}
     - Class: 114
-      Script: {instanceID: 6094}
+      Script: {instanceID: 5772}
     - Class: 114
-      Script: {instanceID: 6492}
+      Script: {instanceID: 6088}
     - Class: 114
-      Script: {instanceID: 7124}
+      Script: {instanceID: 6096}
     - Class: 114
-      Script: {instanceID: 8820}
+      Script: {instanceID: 6494}
     - Class: 114
-      Script: {instanceID: 8844}
+      Script: {instanceID: 7122}
     - Class: 114
-      Script: {instanceID: 8900}
+      Script: {instanceID: 8870}
     - Class: 114
-      Script: {instanceID: 8908}
+      Script: {instanceID: 8886}
     - Class: 114
-      Script: {instanceID: 8912}
+      Script: {instanceID: 8894}
     - Class: 114
-      Script: {instanceID: 8928}
+      Script: {instanceID: 8950}
     - Class: 114
-      Script: {instanceID: 8940}
+      Script: {instanceID: 8954}
     - Class: 114
-      Script: {instanceID: 8948}
+      Script: {instanceID: 8958}
     - Class: 114
-      Script: {instanceID: 8992}
+      Script: {instanceID: 8962}
     - Class: 114
-      Script: {instanceID: 8996}
+      Script: {instanceID: 8982}
     - Class: 114
-      Script: {instanceID: 9028}
+      Script: {instanceID: 8994}
     - Class: 114
-      Script: {instanceID: 9048}
+      Script: {instanceID: 9002}
     - Class: 114
-      Script: {instanceID: 9068}
+      Script: {instanceID: 9046}
     - Class: 114
-      Script: {instanceID: 9072}
+      Script: {instanceID: 9050}
     - Class: 114
-      Script: {instanceID: 9076}
+      Script: {instanceID: 9082}
     - Class: 114
-      Script: {instanceID: 9084}
+      Script: {instanceID: 9114}
     - Class: 114
-      Script: {instanceID: 9160}
+      Script: {instanceID: 9118}
     - Class: 114
-      Script: {instanceID: 9332}
+      Script: {instanceID: 9122}
     - Class: 114
-      Script: {instanceID: 9344}
+      Script: {instanceID: 9130}
     - Class: 114
-      Script: {instanceID: 9352}
+      Script: {instanceID: 9206}
     - Class: 114
-      Script: {instanceID: 9396}
+      Script: {instanceID: 9210}
     - Class: 114
-      Script: {instanceID: 9400}
+      Script: {instanceID: 9378}
     - Class: 114
-      Script: {instanceID: 9468}
+      Script: {instanceID: 9390}
     - Class: 114
-      Script: {instanceID: 9528}
+      Script: {instanceID: 9438}
     - Class: 114
-      Script: {instanceID: 9544}
+      Script: {instanceID: 9442}
     - Class: 114
-      Script: {instanceID: 9612}
+      Script: {instanceID: 9510}
     - Class: 114
-      Script: {instanceID: 9668}
+      Script: {instanceID: 9570}
     - Class: 114
-      Script: {instanceID: 9684}
+      Script: {instanceID: 9586}
     - Class: 114
-      Script: {instanceID: 9720}
+      Script: {instanceID: 9654}
     - Class: 114
-      Script: {instanceID: 9724}
+      Script: {instanceID: 9710}
     - Class: 114
-      Script: {instanceID: 9728}
+      Script: {instanceID: 9722}
     - Class: 114
-      Script: {instanceID: 28262}
+      Script: {instanceID: 9726}
+    - Class: 114
+      Script: {instanceID: 9762}
+    - Class: 114
+      Script: {instanceID: 9766}
+    - Class: 114
+      Script: {instanceID: 9770}
+    - Class: 114
+      Script: {instanceID: 9778}
+    - Class: 114
+      Script: {instanceID: 30134}
+    - Class: 114
+      Script: {instanceID: 32494}
+    - Class: 114
+      Script: {instanceID: 32496}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1480,7 +1588,7 @@ ScriptsOnlyBuild:
     className: PlayerAnimatorManager
   - hash:
       serializedVersion: 2
-      Hash: 842e688bb2ebdbcf6e82cbe233fc41b2
+      Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GraphicSelection
@@ -1864,7 +1972,7 @@ ScriptsOnlyBuild:
     className: Spaceship
   - hash:
       serializedVersion: 2
-      Hash: 3ae298abf1f568a6283e54cbb542e9ad
+      Hash: 965787c454f51ba60382f8129ef1c343
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: BuildingManager
@@ -2416,7 +2524,7 @@ ScriptsOnlyBuild:
     className: LayoutElementMatchSize
   - hash:
       serializedVersion: 2
-      Hash: 4a00a1e361d9959cd934b43b8baf3d88
+      Hash: dc6b96d7a1b718a9b3b9d23d4eec7ac2
     assemblyName: Assembly-CSharp
     namespaceName: MainGame.Scripts
     className: UnitPanelManager
@@ -2488,7 +2596,7 @@ ScriptsOnlyBuild:
     className: ServerSettings
   - hash:
       serializedVersion: 2
-      Hash: 9ab310b1c758328d12cdf71d85a72684
+      Hash: 7bbca440d5fa01ef12604e7e73177dae
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: RTSGameManager

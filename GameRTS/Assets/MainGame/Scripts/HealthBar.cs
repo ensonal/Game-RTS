@@ -15,7 +15,6 @@ public class HealthBar : MonoBehaviour
     private void Start()
     {
         
-        //camera = _cameraParent.GetComponentInChildren<Camera>();
     }
 
     public void UpdateHealthBar(float maxHealth, float currentHealth)
@@ -25,7 +24,7 @@ public class HealthBar : MonoBehaviour
 
     private void Update()
     {
-        //transform.rotation = Quaternion.LookRotation(transform.position - camera.transform.position);
+        
     }
 
    

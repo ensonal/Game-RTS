@@ -66,7 +66,8 @@ public class Fighter : MonoBehaviourPunCallbacks, IAction
         GetComponent<ActionScheduler>().StartAction(this);
         targetObject = target.transform;
         Debug.Log("Attack is done");
-   }
+    }
+    
     public void Cancel()
     {
         targetObject = null;

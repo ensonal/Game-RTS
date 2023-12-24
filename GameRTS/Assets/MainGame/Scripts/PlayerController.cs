@@ -26,7 +26,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
         RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
         foreach (RaycastHit hit in hits)
         {
-           
                 CombatTarget target = hit.transform.GetComponent<CombatTarget>();
                 if (target == null)
                 {

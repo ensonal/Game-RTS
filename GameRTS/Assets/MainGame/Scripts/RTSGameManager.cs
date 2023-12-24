@@ -8,8 +8,8 @@ public class RTSGameManager : MonoBehaviour
     [SerializeField] GameObject cameraParent;
     private int count = 0;
 
-    public Vector3 team1SpawnPoint = new Vector3(75.47f, 19.99f, 74.1f);
-    public Vector3 team2SpawnPoint = new Vector3(65.47f, 19.99f, 74.1f);
+    Vector3 team1SpawnPoint = new (62.48f, 28.52f, 31.99f);
+    Vector3 team2SpawnPoint = new (10.12f, 28.52f, 31.99f);
 
     void Start()
     {
@@ -20,13 +20,14 @@ public class RTSGameManager : MonoBehaviour
     {
         if (PhotonNetwork.IsConnectedAndReady)
         {
-            if (PhotonNetwork.LocalPlayer.ActorNumber % 2 == 0)
-            {
-                PhotonNetwork.Instantiate(cameraParent.name, team2SpawnPoint, Quaternion.identity);
-            }
-            else
+            if (PhotonNetwork.LocalPlayer.ActorNumber == 1)
             {
                 PhotonNetwork.Instantiate(cameraParent.name, team1SpawnPoint, Quaternion.identity);
+            }
+            
+            if(PhotonNetwork.LocalPlayer.ActorNumber == 2)
+            {
+                PhotonNetwork.Instantiate(cameraParent.name, team2SpawnPoint, Quaternion.identity);
             }
         }
         else
@@ -34,5 +35,6 @@ public class RTSGameManager : MonoBehaviour
             Debug.Log("PhotonNetwork.IsConnectedAndReady == false");
         }
     }
+    
 
 }

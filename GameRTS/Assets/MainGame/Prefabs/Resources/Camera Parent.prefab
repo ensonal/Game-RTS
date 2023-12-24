@@ -53,9 +53,9 @@ MonoBehaviour:
   - {fileID: 5358194180081250993}
   - {fileID: 5358194179374332666}
   - {fileID: 5358194180416163676}
-  swatPrefabA: {fileID: 7847743409156819737, guid: 940c64e8153254388b0403f453527924, type: 3}
-  archerPrefabA: {fileID: 368099557311259074, guid: 8929463659a8e48d0a397317c94b37a1, type: 3}
-  woodCutterPrefabA: {fileID: 6178452128728839148, guid: b11cf28d99b0c4ca6b5eaa08e7d36b0c, type: 3}
+  swatPrefab: {fileID: 7847743409156819737, guid: 940c64e8153254388b0403f453527924, type: 3}
+  archerPrefab: {fileID: 368099557311259074, guid: 8929463659a8e48d0a397317c94b37a1, type: 3}
+  woodCutterPrefab: {fileID: 6178452128728839148, guid: b11cf28d99b0c4ca6b5eaa08e7d36b0c, type: 3}
   images:
   - {fileID: 5358194180024449463}
   - {fileID: 5358194179477988997}
@@ -8427,7 +8427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wood: 500
-  coin: 1000
+  coin: 3000
 --- !u!1 &8828930975104236717
 GameObject:
   m_ObjectHideFlags: 0

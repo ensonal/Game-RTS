@@ -30,8 +30,8 @@ public class BuildingManager : MonoBehaviour
         buildings.Add(lumbermillPrefabA.GetComponent<Building>());
         buildings.Add(archeryardPrefabA.GetComponent<Building>());
         buildings.Add(castlePrefabA.GetComponent<Building>());
-
     }
+
     
     public void ShowUpgradePanel()
     {

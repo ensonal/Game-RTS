@@ -21,7 +21,7 @@ public class Health : MonoBehaviourPunCallbacks
     {
         if (health <= 0)
         {
-            Destroy(gameObject);
+            PhotonNetwork.Destroy(gameObject);
         }
 
         healthBar.UpdateHealthBar(maxHealth, health);

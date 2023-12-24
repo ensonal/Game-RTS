@@ -4,18 +4,19 @@ using System.Collections.Generic;
 using Photon.Pun;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace MainGame.Scripts
 {
-    public class UnitPanelManager : MonoBehaviour
+    public class UnitPanelManager : MonoBehaviourPunCallbacks
     {
         [SerializeField] private GameObject createUnitPanel;
         [SerializeField] private TextMeshProUGUI[] nameTexts;
         [SerializeField] private TextMeshProUGUI[] costTexts;
-        [SerializeField] private GameObject swatPrefabA;
-        [SerializeField] private GameObject archerPrefabA;
-        [SerializeField] private GameObject woodCutterPrefabA;
+        [SerializeField] private GameObject swatPrefab;
+        [SerializeField] private GameObject archerPrefab;
+        [SerializeField] private GameObject woodCutterPrefab;
         [SerializeField] private Image[] images;
         [SerializeField] private GameObject user;
         [SerializeField] private TextMeshProUGUI swatCount;
@@ -26,29 +27,57 @@ namespace MainGame.Scripts
         private int buyAttemptCount = 0;
         private Vector3 addedPosition2 = new Vector3(0, 0, 1);
         private int coroutineCountToStart = 0;
-
-
+        
+        Vector3 addedPosition = new Vector3(1, 0, 0);
+        Vector3 archerInstantiatePosition = new Vector3(0, 0, 0);
+        Vector3 swatInstantiatePosition = new Vector3(0, 0, 0);
+        Vector3 woodInstantiatePosition = new Vector3(0, 0, 0);
+        Quaternion rotation = Quaternion.Euler(0, 90, 0);
+        
+        void Start()
+        {
+            SetSpawnPosition();
+        }
 
         void Update()
         {
             
         }
 
+        void SetSpawnPosition()
+        {
+            int playerID = PhotonNetwork.LocalPlayer.ActorNumber;
+            if (playerID == 1)
+            {
+                archerInstantiatePosition = new Vector3(54.86f, 10.99f, 51.37f);
+                swatInstantiatePosition = new Vector3(72.85f, 10.99f, 64.42f);
+                woodInstantiatePosition = new Vector3(54.86f, 10.99f, 77.33f);
+                rotation = Quaternion.Euler(0, -90, 0);
+                
+            }
+
+            if (playerID == 2)
+            {
+                archerInstantiatePosition = new Vector3(15.5f, 10.99f, 51.4f);
+                swatInstantiatePosition = new Vector3(2.8f, 10.99f, 64.4f);
+                woodInstantiatePosition = new Vector3(14.7f, 10.99f, 77.33f);
+            }
+
+        }
+
         private void BuySelectedUnit(string prefabName)
         {
             Debug.Log("BuySelectedUnit method is called.");
             //PhotonNetwork.Instantiate(selectedBuilding.name, new Vector3(2.73f,4.68f,65.04f), Quaternion.Euler(0, 90, 0));
-            Vector3 addedPosition = new Vector3(1, 0, 0);
             
             if (prefabName.Contains("Archer"))
             {
-                Vector3 archerInstantiatePosition = new Vector3(71.22f, 10.99f, 67.57f);
-                archerPrefabA.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                archerPrefab.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                 
                 for(int i = 0; i < Int32.Parse(archerCount.text); i++)
                 {
-                    PhotonNetwork.Instantiate(archerPrefabA.name, archerInstantiatePosition, Quaternion.Euler(0, -90, 0));
-                    user.gameObject.GetComponent<User>().coin -= archerPrefabA.GetComponent<Unit>().cost;
+                    PhotonNetwork.Instantiate(archerPrefab.name, archerInstantiatePosition, rotation);
+                    user.gameObject.GetComponent<User>().coin -= archerPrefab.GetComponent<Unit>().cost;
                     archerInstantiatePosition -= addedPosition;
                 }
                 
@@ -58,14 +87,13 @@ namespace MainGame.Scripts
 
             if (prefabName.Contains("Swat"))
             {
-                Vector3 swatInstantiatePosition = new Vector3(55.86f, 10.99f, 61.09f);
-                swatPrefabA.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                swatPrefab.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                 
                 for(int i = 0; i < Int32.Parse(swatCount.text); i++)
                 {
                     Debug.Log("Swat was bought. check");
-                    PhotonNetwork.Instantiate(swatPrefabA.name, swatInstantiatePosition, Quaternion.Euler(0, -90, 0));
-                    user.gameObject.GetComponent<User>().coin -= swatPrefabA.GetComponent<Unit>().cost;
+                    PhotonNetwork.Instantiate(swatPrefab.name, swatInstantiatePosition, rotation);
+                    user.gameObject.GetComponent<User>().coin -= swatPrefab.GetComponent<Unit>().cost;
                     swatInstantiatePosition -= addedPosition;
                 }
                 
@@ -75,13 +103,12 @@ namespace MainGame.Scripts
 
             if (prefabName.Contains("Wood"))
             {
-                Vector3 woodInstantiatePosition = new Vector3(71.91f, 10.99f, 74.4f);
-                woodCutterPrefabA.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                woodCutterPrefab.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
 
                 if (buyAttemptCount > 0)
                 {
                     woodInstantiatePosition += addedPosition2;
-                    user.gameObject.GetComponent<User>().coin -= woodCutterPrefabA.GetComponent<Unit>().cost;
+                    user.gameObject.GetComponent<User>().coin -= woodCutterPrefab.GetComponent<Unit>().cost;
                     addedPosition2 += addedPosition2;
                 }
                 
@@ -89,12 +116,12 @@ namespace MainGame.Scripts
                 {
                     if (buyAttemptCount > 0)
                     {
-                        PhotonNetwork.Instantiate(woodCutterPrefabA.name, woodInstantiatePosition, Quaternion.Euler(0, -90, 0));
+                        PhotonNetwork.Instantiate(woodCutterPrefab.name, woodInstantiatePosition, rotation);
                         woodInstantiatePosition -= addedPosition;
                     }
                     else
                     {
-                        PhotonNetwork.Instantiate(woodCutterPrefabA.name, woodInstantiatePosition, Quaternion.Euler(0, -90, 0));
+                        PhotonNetwork.Instantiate(woodCutterPrefab.name, woodInstantiatePosition, rotation);
                         woodInstantiatePosition -= addedPosition;
                     }
                     
@@ -158,17 +185,17 @@ namespace MainGame.Scripts
         {
             Debug.Log("PopulateUpgradePanel method is called.");
             
-            nameTexts[2].text = swatPrefabA.GetComponent<Unit>().name;
-            nameTexts[1].text = archerPrefabA.GetComponent<Unit>().name;
-            nameTexts[0].text = woodCutterPrefabA.GetComponent<Unit>().name;
+            nameTexts[2].text = swatPrefab.GetComponent<Unit>().name;
+            nameTexts[1].text = archerPrefab.GetComponent<Unit>().name;
+            nameTexts[0].text = woodCutterPrefab.GetComponent<Unit>().name;
             
-            costTexts[2].text = swatPrefabA.GetComponent<Unit>().cost.ToString();
-            costTexts[1].text = archerPrefabA.GetComponent<Unit>().cost.ToString();
-            costTexts[0].text = woodCutterPrefabA.GetComponent<Unit>().cost.ToString();
+            costTexts[2].text = swatPrefab.GetComponent<Unit>().cost.ToString();
+            costTexts[1].text = archerPrefab.GetComponent<Unit>().cost.ToString();
+            costTexts[0].text = woodCutterPrefab.GetComponent<Unit>().cost.ToString();
             
-            images[2].sprite = swatPrefabA.GetComponent<Unit>().sprite;
-            images[1].sprite = archerPrefabA.GetComponent<Unit>().sprite;
-            images[0].sprite = woodCutterPrefabA.GetComponent<Unit>().sprite;
+            images[2].sprite = swatPrefab.GetComponent<Unit>().sprite;
+            images[1].sprite = archerPrefab.GetComponent<Unit>().sprite;
+            images[0].sprite = woodCutterPrefab.GetComponent<Unit>().sprite;
         }
         
         public void IncreaseSwatCount()
