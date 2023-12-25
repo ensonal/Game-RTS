@@ -4926,7 +4926,7 @@ GameObject:
   - component: {fileID: 5358194180214171088}
   m_Layer: 0
   m_Name: Main Canvas
-  m_TagString: Untagged
+  m_TagString: CanvasB
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8394,7 +8394,7 @@ GameObject:
   - component: {fileID: 6810470420995237347}
   m_Layer: 0
   m_Name: User
-  m_TagString: UserA
+  m_TagString: UserB
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

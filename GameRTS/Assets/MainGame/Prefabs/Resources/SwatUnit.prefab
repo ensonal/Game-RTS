@@ -2302,7 +2302,7 @@ GameObject:
   - component: {fileID: 2558744351849899647}
   m_Layer: 8
   m_Name: SwatUnit
-  m_TagString: TeamA
+  m_TagString: TeamB
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

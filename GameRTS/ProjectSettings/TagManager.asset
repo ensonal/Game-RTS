@@ -19,6 +19,8 @@ TagManager:
   - TeamB
   - UserA
   - UserB
+  - CanvasA
+  - CanvasB
   layers:
   - Default
   - TransparentFX

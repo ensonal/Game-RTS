@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: -6738250226972981557}
   m_Layer: 8
   m_Name: ArcherUnit
-  m_TagString: TeamA
+  m_TagString: TeamB
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -44,7 +44,7 @@ public class Cutter : MonoBehaviour, IAction
 
     void Hit()
     {
-        HealthTree health = targetObject.GetComponent<HealthTree>();
+        var health = targetObject.gameObject.GetComponent<HealthTree>();
         health.gameObject.GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.All, axDamage);
     }
 

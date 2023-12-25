@@ -7,7 +7,7 @@ public class HealthTree : MonoBehaviourPunCallbacks
 {
     [SerializeField] public float health;
     
-    private GameObject user;
+    GameObject user;
     
     private void Start()
     {

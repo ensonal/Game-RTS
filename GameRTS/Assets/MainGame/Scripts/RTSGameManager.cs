@@ -15,21 +15,25 @@ public class RTSGameManager : MonoBehaviour
     void Start()
     {
         SpawnPlayer();
+        
     }
-
+    
     void SpawnPlayer()
     {
         if (PhotonNetwork.IsConnectedAndReady)
         {
+            Debug.Log(PhotonNetwork.LocalPlayer.ActorNumber);
             if (PhotonNetwork.LocalPlayer.ActorNumber == 1)
             {
                 PhotonNetwork.Instantiate(cameraParent.name, team1SpawnPoint, Quaternion.identity);
+                cameraParent.transform.GetChild(3).gameObject.tag = "CanvasA";
                 cameraParent.transform.GetChild(4).gameObject.tag = "UserA";
             }
             
             if(PhotonNetwork.LocalPlayer.ActorNumber == 2)
             {
                 PhotonNetwork.Instantiate(cameraParent.name, team2SpawnPoint, Quaternion.identity);
+                cameraParent.transform.GetChild(3).gameObject.tag = "CanvasB";
                 cameraParent.transform.GetChild(4).gameObject.tag = "UserB";
             }
         }
