@@ -660,11 +660,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9782}
     - Class: 114
-      Script: {instanceID: 30102}
+      Script: {instanceID: 29946}
     - Class: 114
-      Script: {instanceID: 32462}
+      Script: {instanceID: 32306}
     - Class: 114
-      Script: {instanceID: 32464}
+      Script: {instanceID: 32308}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1968,7 +1968,7 @@ ScriptsOnlyBuild:
     className: Spaceship
   - hash:
       serializedVersion: 2
-      Hash: 965787c454f51ba60382f8129ef1c343
+      Hash: 01b6245c61fb5dbc8fb0059310754609
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: BuildingManager
