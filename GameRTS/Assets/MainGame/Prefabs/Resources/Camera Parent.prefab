@@ -2350,7 +2350,7 @@ RectTransform:
   - {fileID: 5358194180362701240}
   - {fileID: 5358194180101608020}
   - {fileID: 5358194179133860050}
-  - {fileID: 5358194180426616262}
+  - {fileID: 5358194180345874610}
   - {fileID: 5358194179734095852}
   m_Father: {fileID: 5358194179204969865}
   m_RootOrder: -1
@@ -2391,7 +2391,7 @@ RectTransform:
   - {fileID: 5358194179317482110}
   - {fileID: 5358194180332522234}
   - {fileID: 5358194180886294337}
-  - {fileID: 5358194180927656499}
+  - {fileID: 5358194180426616262}
   - {fileID: 5358194179847654569}
   m_Father: {fileID: 5358194179204969865}
   m_RootOrder: -1
@@ -5198,7 +5198,7 @@ RectTransform:
   - {fileID: 5358194180566264706}
   - {fileID: 5358194180132269051}
   - {fileID: 5358194179785032122}
-  - {fileID: 5358194180345874610}
+  - {fileID: 5358194180927656499}
   - {fileID: 5358194180879757251}
   m_Father: {fileID: 5358194179204969865}
   m_RootOrder: -1
@@ -5511,12 +5511,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5358194180281612963}
+  m_Father: {fileID: 5358194179634884409}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0027323, y: -146.06}
+  m_AnchoredPosition: {x: -3, y: -146.06}
   m_SizeDelta: {x: 160, y: 168.1144}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5358194180345874609
@@ -6448,12 +6448,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5358194179634884409}
+  m_Father: {fileID: 5358194179642146186}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0027323, y: -146.06}
+  m_AnchoredPosition: {x: 1, y: -146.05998}
   m_SizeDelta: {x: 160, y: 168.1144}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5358194180426616261
@@ -8134,12 +8134,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5358194179642146186}
+  m_Father: {fileID: 5358194180281612963}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0027323, y: -146.06}
+  m_AnchoredPosition: {x: -1, y: -146.06001}
   m_SizeDelta: {x: 160, y: 168.1144}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5358194180927656510
@@ -8719,11 +8719,7 @@ MonoBehaviour:
   castlePrefabA: {fileID: 2149138306500054904, guid: 6d7ad02f33138b349bc02ccea7dbfac5, type: 3}
   lumbermillPrefabA: {fileID: 5491560384211002521, guid: 8d070d7636ed241459a31504c958cc93, type: 3}
   archeryardPrefabA: {fileID: 957562588133377799, guid: bee9006d1cb19f7489d4116c39c38b23, type: 3}
-  castlePrefabB: {fileID: 1391843316543500301, guid: c81ef9f46ff214d73b7aabbfae5c734b, type: 3}
-  lumbermillPrefabB: {fileID: 7699240499952530441, guid: 07049193330ad44a6bb0afde33cb94cd, type: 3}
-  archeryardPrefabB: {fileID: 595388390487025735, guid: 19f52c66c78e24f15a634264d3779a51, type: 3}
   user: {fileID: 6810470420995237344}
-  cameraParent: {fileID: 8828930975104236717}
 --- !u!114 &6726774772774388828
 MonoBehaviour:
   m_ObjectHideFlags: 0

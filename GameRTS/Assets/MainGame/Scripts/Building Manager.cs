@@ -15,23 +15,31 @@ public class BuildingManager : MonoBehaviour
     [SerializeField] private GameObject castlePrefabA;
     [SerializeField] private GameObject lumbermillPrefabA;
     [SerializeField] private GameObject archeryardPrefabA;
-    [SerializeField] private GameObject castlePrefabB;
-    [SerializeField] private GameObject lumbermillPrefabB;
-    [SerializeField] private GameObject archeryardPrefabB;
     [SerializeField] private GameObject user;
-    [SerializeField] private GameObject cameraParent;
 
     private GameObject selectedBuilding;
     private List<Building> buildings;
-    
+    private string teamTag;
     void Start()
     {
         buildings = new List<Building>();
         buildings.Add(lumbermillPrefabA.GetComponent<Building>());
         buildings.Add(archeryardPrefabA.GetComponent<Building>());
         buildings.Add(castlePrefabA.GetComponent<Building>());
+        SetTeamTag();
     }
 
+    void SetTeamTag()
+    {
+        if(PhotonNetwork.LocalPlayer.ActorNumber == 1)
+        {
+            teamTag = "A";
+        }
+        else
+        {
+            teamTag = "B";
+        }
+    }
     
     public void ShowUpgradePanel()
     {
@@ -65,7 +73,7 @@ public class BuildingManager : MonoBehaviour
         if (prefabName.Contains("archer"))
         {
             Debug.Log("Archeryrange is upgraded.");
-            GameObject archeryard = GameObject.FindGameObjectWithTag("archeryrangeA");
+            GameObject archeryard = GameObject.Find("archeryrange" + teamTag);
             archeryard.gameObject.GetComponent<Health>().health = 300;
             user.gameObject.GetComponent<User>().wood -= archeryardPrefabA.GetComponent<Building>().cost;
             HideUpgradePanel();
@@ -74,7 +82,7 @@ public class BuildingManager : MonoBehaviour
         if (prefabName.Contains("lumbermill"))
         {
             Debug.Log("Lumbermill is upgraded.");
-            GameObject lumbermill = GameObject.FindGameObjectWithTag("lumbermillA");
+            GameObject lumbermill = GameObject.Find("lumbermill" + teamTag);
             lumbermill.gameObject.GetComponent<Health>().health = 300;
             user.gameObject.GetComponent<User>().wood -= lumbermillPrefabA.GetComponent<Building>().cost;
             HideUpgradePanel();
@@ -83,36 +91,9 @@ public class BuildingManager : MonoBehaviour
         if (prefabName.Contains("castle"))
         {
             Debug.Log("Castle is upgraded.");
-            GameObject castle = GameObject.FindGameObjectWithTag("castleA");
+            GameObject castle = GameObject.Find("castle" + teamTag);
             castle.gameObject.GetComponent<Health>().health = 500;
             user.gameObject.GetComponent<User>().wood -= castlePrefabA.GetComponent<Building>().cost;
-            HideUpgradePanel();
-        }
-        
-        if (prefabName.Contains("archer"))
-        {
-            Debug.Log("Archeryrange is upgraded.");
-            GameObject archeryard = GameObject.FindGameObjectWithTag("archeryrangeB");
-            archeryard.gameObject.GetComponent<Health>().health = 300;
-            user.gameObject.GetComponent<User>().wood -= archeryardPrefabB.GetComponent<Building>().cost;
-            HideUpgradePanel();
-        }
-        
-        if (prefabName.Contains("lumbermill"))
-        {
-            Debug.Log("Lumbermill is upgraded.");
-            GameObject lumbermill = GameObject.FindGameObjectWithTag("lumbermillB");
-            lumbermill.gameObject.GetComponent<Health>().health = 300;
-            user.gameObject.GetComponent<User>().wood -= lumbermillPrefabB.GetComponent<Building>().cost;
-            HideUpgradePanel();
-        }
-        
-        if (prefabName.Contains("castle"))
-        {
-            Debug.Log("Castle is upgraded.");
-            GameObject castle = GameObject.FindGameObjectWithTag("castleB");
-            castle.gameObject.GetComponent<Health>().health = 500;
-            user.gameObject.GetComponent<User>().wood -= castlePrefabB.GetComponent<Building>().cost;
             HideUpgradePanel();
         }
     }

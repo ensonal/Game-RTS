@@ -33,7 +33,8 @@ namespace MainGame.Scripts
         Vector3 swatInstantiatePosition = new Vector3(0, 0, 0);
         Vector3 woodInstantiatePosition = new Vector3(0, 0, 0);
         Quaternion rotation = Quaternion.Euler(0, 90, 0);
-        private int playerID = 0;
+        int playerID = 0;
+
         void Start()
         {
             playerID = PhotonNetwork.LocalPlayer.ActorNumber;
@@ -49,10 +50,6 @@ namespace MainGame.Scripts
                 swatInstantiatePosition = new Vector3(72.85f, 10.99f, 64.42f);
                 woodInstantiatePosition = new Vector3(54.86f, 10.99f, 77.33f);
                 rotation = Quaternion.Euler(0, -90, 0);
-                swatPrefab.tag = "TeamA";
-                archerPrefab.tag = "TeamA";
-                woodCutterPrefab.tag = "TeamA";
-                
             }
 
             if (playerID == 2)
@@ -61,11 +58,7 @@ namespace MainGame.Scripts
                 archerInstantiatePosition = new Vector3(15.5f, 10.99f, 51.4f);
                 swatInstantiatePosition = new Vector3(2.8f, 10.99f, 64.4f);
                 woodInstantiatePosition = new Vector3(14.7f, 10.99f, 77.33f);
-                swatPrefab.tag = "TeamB";
-                archerPrefab.tag = "TeamB";
-                woodCutterPrefab.tag = "TeamB";
             }
-
         }
 
         private void BuySelectedUnit(string prefabName, int selectedUnitCost)
@@ -78,6 +71,7 @@ namespace MainGame.Scripts
                 
                 for(int i = 0; i < Int32.Parse(archerCount.text); i++)
                 {
+                    
                     PhotonNetwork.Instantiate(archerPrefab.name, archerInstantiatePosition, rotation);
                     archerInstantiatePosition -= addedPosition;
                 }
@@ -98,6 +92,7 @@ namespace MainGame.Scripts
                     PhotonNetwork.Instantiate(swatPrefab.name, swatInstantiatePosition, rotation);
                     swatInstantiatePosition -= addedPosition;
                 }
+                
                 user.gameObject.GetComponent<User>().coin -= selectedUnitCost;
                 HideUnitPanel();
                 Debug.Log("Swat was bought.");
@@ -125,9 +120,8 @@ namespace MainGame.Scripts
                         PhotonNetwork.Instantiate(woodCutterPrefab.name, woodInstantiatePosition, rotation);
                         woodInstantiatePosition -= addedPosition;
                     }
-                    
-
                 }
+                
                 user.gameObject.GetComponent<User>().coin -= selectedUnitCost;
                 
                 buyAttemptCount++;
@@ -165,6 +159,18 @@ namespace MainGame.Scripts
             else
             {
                 Debug.Log("Balance is not enough.");
+            }
+        }
+        
+        private void SetTagForUnit(int playerID, GameObject unit)
+        {
+            if (playerID == 1)
+            {
+                unit.tag = "TeamA";
+            }
+            else
+            {
+                unit.tag = "TeamB";
             }
         }
 
